@@ -1,0 +1,49 @@
+<h1 id="malihu-custom-scrollbar-plugin"><a href="#malihu-custom-scrollbar-plugin" class="headerlink" title="malihu custom scrollbar plugin"></a>malihu custom scrollbar plugin</h1><p>Highly customizable custom scrollbar jQuery plugin (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/complete_examples.html" target="_blank" rel="noopener">Demo</a>). Features include: </p>
+<ul>
+<li>Vertical and/or horizontal scrollbar(s)  </li>
+<li>Adjustable scrolling momentum </li>
+<li>Mouse-wheel, keyboard and touch support </li>
+<li>Ready-to-use themes and customization via CSS </li>
+<li>RTL direction support </li>
+<li>Option parameters for full control of scrollbar functionality </li>
+<li>Methods for triggering actions like scroll-to, update, destroy etc. </li>
+<li>User-defined callbacks </li>
+<li>Selectable/searchable content</li>
+</ul>
+<p><strong><a href="http://manos.malihu.gr/jquery-custom-content-scroller/" target="_blank" rel="noopener">Plugin homepage and documentation</a></strong> (<a href="http://manos.malihu.gr/jquery-custom-content-scroller/2/" target="_blank" rel="noopener">Changelog</a>) </p>
+<h4 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h4><p>npm: <code>npm install malihu-custom-scrollbar-plugin</code> </p>
+<p>Bower: <code>bower install malihu-custom-scrollbar-plugin</code> </p>
+<p><a href="http://manos.malihu.gr/jquery-custom-content-scroller/#get-started-section" target="_blank" rel="noopener">Manual</a> </p>
+<h4 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h4><p>Manual: <code>$(selector).mCustomScrollbar();</code> </p>
+<p><a href="http://browserify.org/" target="_blank" rel="noopener">Browserify</a>: </p>
+<pre><code>var $ = require(&apos;jquery&apos;);
+require(&apos;malihu-custom-scrollbar-plugin&apos;)($);</code></pre><p><a href="https://webpack.github.io/" target="_blank" rel="noopener">webpack</a>: </p>
+<pre><code>npm install imports-loader
+npm install jquery-mousewheel
+npm install malihu-custom-scrollbar-plugin
+
+module.exports = {
+    module: {
+        loaders: [
+            { test: /jquery-mousewheel/, loader: &quot;imports?define=&gt;false&amp;this=&gt;window&quot; },
+            { test: /malihu-custom-scrollbar-plugin/, loader: &quot;imports?define=&gt;false&amp;this=&gt;window&quot; }
+        ]
+    }
+};
+
+var $ = require(&apos;jquery&apos;);
+require(&quot;jquery-mousewheel&quot;)($);
+require(&apos;malihu-custom-scrollbar-plugin&apos;)($);</code></pre><h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><p>jQuery version <strong>1.6.0</strong> or higher</p>
+<h2 id="Browser-compatibility"><a href="#Browser-compatibility" class="headerlink" title="Browser compatibility"></a>Browser compatibility</h2><ul>
+<li>Internet Explorer 8+ </li>
+<li>Firefox </li>
+<li>Chrome </li>
+<li>Opera </li>
+<li>Safari  </li>
+<li>iOS </li>
+<li>Android </li>
+<li>Windows Phone</li>
+</ul>
+<h2 id="License"><a href="#License" class="headerlink" title="License "></a>License </h2><p>MIT License (MIT)</p>
+<p><a href="http://opensource.org/licenses/MIT" target="_blank" rel="noopener">http://opensource.org/licenses/MIT</a></p>
+<h2 id="Donate"><a href="#Donate" class="headerlink" title="Donate "></a>Donate </h2><p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=UYJ5G65M6ZA28" target="_blank" rel="noopener">https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=UYJ5G65M6ZA28</a></p>

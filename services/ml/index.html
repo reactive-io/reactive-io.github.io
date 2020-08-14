@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-49251855-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-49251855-1');
+    </script>
+
+
+    
+      <title>Reactive.IO - Machine Learning</title>
+    
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" />
+
+    
+<link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css">
+
+    
+<link rel="stylesheet" href="/vendor/icon-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/vendor/icon-line/css/simple-line-icons.css">
+
+    
+<link rel="stylesheet" href="/vendor/icon-etlinefont/style.css">
+
+    
+<link rel="stylesheet" href="/vendor/icon-line-pro/style.css">
+
+    
+<link rel="stylesheet" href="/vendor/icon-hs/style.css">
+
+    
+<link rel="stylesheet" href="/vendor/animate.css">
+
+    
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+    
+<link rel="stylesheet" href="/vendor/hs-megamenu/src/hs.megamenu.css">
+
+    
+<link rel="stylesheet" href="/vendor/hamburgers/hamburgers.min.css">
+
+    
+    
+    
+<link rel="stylesheet" href="/css/unify.css">
+
+
+  <meta name="generator" content="Hexo 4.2.0"></head>
+  <body>
+    <main>
+      <header id="js-header" class="u-header u-header--static">
+  <div class="u-header__section u-header__section--light g-bg-white g-transition-0_3 g-py-10">
+    <nav class="js-mega-menu navbar navbar-expand-lg hs-menu-initialized hs-menu-horizontal">
+      <div class="container">
+        <button class="navbar-toggler navbar-toggler-right btn g-line-height-1 g-brd-none g-pa-0 g-pos-abs g-top-minus-3 g-right-0" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
+          <span class="hamburger hamburger--slider">
+            <span class="hamburger-box">
+              <span class="hamburger-inner">
+              </span>
+            </span>
+          </span>
+        </button>
+
+        <a href="/" class="navbar-brand d-flex">
+          <img id="logo-header-reactiveio" class="img-fluid" src="/img/logo/reactiveio-default.png" alt="Reactive.IO">
+        </a>
+      
+        <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg g-mr-40--lg" id="navBar">
+          <ul class="navbar-nav g-pos-rel g-font-weight-600 ml-auto">
+            
+                
+                <li class="nav-item g-mx-10--lg g-mx-15--xl">
+                  <a href="/" class="nav-link g-py-7 g-px-0">Home</a>
+                </li>
+              
+            
+              
+                <li class="nav-item hs-has-sub-menu  g-mx-10--lg g-mx-15--xl" data-animation-in="fadeIn" data-animation-out="fadeOut">
+                  <a id="nav-link--features" class="nav-link g-py-7 g-px-0" href="/services/" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--features">Services</a>
+                  <ul class="hs-sub-menu list-unstyled u-shadow-v11 g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-mt-18 g-mt-8--lg--scrolling" id="nav-submenu--features" aria-labelledby="nav-link--features">
+                    
+                      
+                    
+                      
+                        <li class="dropdown-item ">
+                          <a href="/services/devops/" class="nav-link">Agile DevOps</a>
+                        </li>
+                      
+                    
+                      
+                        <li class="dropdown-item ">
+                          <a href="/services/ml/" class="nav-link">Machine Learning</a>
+                        </li>
+                      
+                    
+                      
+                        <li class="dropdown-item ">
+                          <a href="/services/cloudops/" class="nav-link">Secure CloudOps</a>
+                        </li>
+                      
+                    
+                  </ul>
+                </li>
+              
+            
+              
+                <li class="nav-item hs-has-sub-menu  g-mx-10--lg g-mx-15--xl" data-animation-in="fadeIn" data-animation-out="fadeOut">
+                  <a id="nav-link--features" class="nav-link g-py-7 g-px-0" href="/industries/" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--features">Industries</a>
+                  <ul class="hs-sub-menu list-unstyled u-shadow-v11 g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-mt-18 g-mt-8--lg--scrolling" id="nav-submenu--features" aria-labelledby="nav-link--features">
+                    
+                      
+                    
+                      
+                        <li class="dropdown-item ">
+                          <a href="/industries/federal/" class="nav-link">Federal Government</a>
+                        </li>
+                      
+                    
+                      
+                        <li class="dropdown-item ">
+                          <a href="/industries/corperate/" class="nav-link">Corperate Firms</a>
+                        </li>
+                      
+                    
+                      
+                        <li class="dropdown-item ">
+                          <a href="/industries/startup/" class="nav-link">Start-Ups</a>
+                        </li>
+                      
+                    
+                  </ul>
+                </li>
+              
+            
+          </ul>
+        </div>
+
+        <div class="d-inline-block g-hidden-md-down g-pos-rel g-valign-middle g-pl-30 g-pl-0--lg">
+          <a class="btn u-btn-outline-primary g-font-size-13 text-uppercase g-py-10 g-px-15" href="mailto:contact@reactive.io" target="_blank">Contact Us</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+      <section class="container g-pt-70 g-pb-30">
+  <div class="row justify-content-center text-center g-mb-50">
+    <div class="col-lg-9">
+      <h1 class="h2 g-color-black g-font-weight-600 mb-2">Machine Learning</h1>
+      <div class="d-inline-block g-width-30 g-height-2 g-bg-primary mb-2"></div>
+      <p class="lead mb-0">Give your business a Machine Learning supercharge. Start leveraging our cutting-edge ML expertise to predict new opportunities, rapidly analyze Big Data, and cut down fraud.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    
+      <div class="col-lg-4 g-mb-30">
+        <div class="media g-mb-15">
+          <div class="d-flex mr-4">
+            <span class="g-color-primary g-font-size-30">
+                <i class="icon-science-094 u-line-icon-pro"></i>
+              </span>
+          </div>
+          <div class="media-body">
+            <h3 class="h5 g-color-black g-font-weight-600 mb-20">Model Training &amp; Tuning</h3>
+              <p class="g-color-gray-dark-v4">Effective ML requires pairing the right data with the best models. From supervised training to hyperparameter tuning, we'll upgrade your business IQ with ML.</p>
+          </div>
+        </div>
+
+        
+          <hr class="g-mt-30">
+        
+      </div>
+    
+      <div class="col-lg-4 g-mb-30">
+        <div class="media g-mb-15">
+          <div class="d-flex mr-4">
+            <span class="g-color-primary g-font-size-30">
+                <i class="icon-finance-088 u-line-icon-pro"></i>
+              </span>
+          </div>
+          <div class="media-body">
+            <h3 class="h5 g-color-black g-font-weight-600 mb-20">Data Prep &amp; Analysis</h3>
+              <p class="g-color-gray-dark-v4">Quality out means quality in. Our expertise in Big Data analysis makes us super effective at preping complex data, ensuring your ML models make accurate decisions.</p>
+          </div>
+        </div>
+
+        
+          <hr class="g-mt-30">
+        
+      </div>
+    
+      <div class="col-lg-4 g-mb-30">
+        <div class="media g-mb-15">
+          <div class="d-flex mr-4">
+            <span class="g-color-primary g-font-size-30">
+                <i class="icon-science-119 u-line-icon-pro"></i>
+              </span>
+          </div>
+          <div class="media-body">
+            <h3 class="h5 g-color-black g-font-weight-600 mb-20">Data Classification</h3>
+              <p class="g-color-gray-dark-v4">If you've been collecting loads data for any period of time, then ML can classify it for optimal use and compliancy and give your business an information supercharge.</p>
+          </div>
+        </div>
+
+        
+          <hr class="g-mt-30">
+        
+      </div>
+    
+      <div class="col-lg-4 g-mb-30">
+        <div class="media g-mb-15">
+          <div class="d-flex mr-4">
+            <span class="g-color-primary g-font-size-30">
+                <i class="icon-finance-012 u-line-icon-pro"></i>
+              </span>
+          </div>
+          <div class="media-body">
+            <h3 class="h5 g-color-black g-font-weight-600 mb-20">Prediction &amp; Forecasting</h3>
+              <p class="g-color-gray-dark-v4">See the future so you can outplan your competitors. From financial and resource forcasting to sales predictions, be ready for the future when it comes at you.</p>
+          </div>
+        </div>
+
+        
+      </div>
+    
+      <div class="col-lg-4 g-mb-30">
+        <div class="media g-mb-15">
+          <div class="d-flex mr-4">
+            <span class="g-color-primary g-font-size-30">
+                <i class="icon-media-075 u-line-icon-pro"></i>
+              </span>
+          </div>
+          <div class="media-body">
+            <h3 class="h5 g-color-black g-font-weight-600 mb-20">Image &amp; Video Recognition</h3>
+              <p class="g-color-gray-dark-v4">Using advanced image recognition services and semantic segmentation algorithims, you can start unlocking data stored in images and start tracking objects in real-time.</p>
+          </div>
+        </div>
+
+        
+      </div>
+    
+      <div class="col-lg-4 g-mb-30">
+        <div class="media g-mb-15">
+          <div class="d-flex mr-4">
+            <span class="g-color-primary g-font-size-30">
+                <i class="icon-finance-026 u-line-icon-pro"></i>
+              </span>
+          </div>
+          <div class="media-body">
+            <h3 class="h5 g-color-black g-font-weight-600 mb-20">Real-Time Fraud Detection</h3>
+              <p class="g-color-gray-dark-v4">When dealing with high-volume financial transactions, fraud is an ever-present foe. Leverage real-time fraud detection that stays ahead of theives and protects your business.</p>
+          </div>
+        </div>
+
+        
+      </div>
+    
+  </div>
+</section>
+
+<hr class="g-brd-gray-light-v4 my-0">
+
+      <section class="g-bg-secondary">
+  <div class="container text-center g-py-70">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-9">
+        <div class="g-mb-50">
+          <h1 class="h2 g-color-black g-font-weight-600 mb-2">Let's Make You <span class="g-color-primary">Faster</span></h1>
+          <div class="d-inline-block g-width-30 g-height-2 g-bg-primary mb-2"></div>
+          <p class="lead mb-0">To cut through the hardest technology problems, you need the sharpest industry experts.  Learn why early stage Start-Ups, Fortune 500s, and Federal Agencies trust us to build their mission-critical software right the first time.</p>
+        </div>
+        <div class="d-inline-block g-pos-rel g-valign-middle g-pl-0--lg">
+          <a class="btn u-btn-outline-primary g-font-size-13 text-uppercase g-py-10 g-px-15" href="mailto:contact@reactive.io" target="_blank">Contact Us Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="g-bg-primary g-color-white g-pt-5">
+</section>
+
+<div class="g-bg-black-opacity-0_9 g-color-white-opacity-0_8 g-py-60">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 g-mb-40 g-mb-0--lg">
+        <div class="u-heading-v3-1 g-brd-white-opacity-0_3 g-mb-25">
+          <h2 class="u-heading-v3__title h6 g-brd-bottom g-brd-white-opacity-0_1 g-pb-10">Verified SDVOSB</h2>
+        </div>
+
+        <p>
+          <a class="d-block g-mb-20" href="https://www.vip.vetbiz.va.gov/Search/BusinessProfile/8685d4b9-24f5-e611-942c-0050568df19d" target="_blank">
+            <img class="img-fluid sdvosb" src="/img/logo/sdvosb.png" alt="SDVOSB">
+          </a>
+          <span class="g-hidden-lg-down">Reactive.IO is a Verified</span> Service Disabled Veteran Owned Small Business.
+        </p>
+      </div>
+
+      <div class="col-lg-3 col-md-6 g-mb-40 g-mb-0--lg">
+        <div class="u-heading-v3-1 g-brd-white-opacity-0_3 g-mb-25">
+          <h2 class="u-heading-v3__title h6 g-brd-bottom g-brd-white-opacity-0_1 g-pb-10">Explore Reactive.IO</h2>
+        </div>
+
+        <nav class="text-uppercase1">
+          <ul class="list-unstyled g-mt-minus-10 mb-0">
+            
+              <li class="g-pos-rel g-brd-white-opacity-0_1 g-py-4">
+                <h4 class="h6 g-pr-20 mb-0">
+                    
+                    <a class="g-color-white-opacity-0_8 g-color-white--hover" href="/">Home</a>
+                  
+                  <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
+                </h4>
+              </li>
+            
+              <li class="g-pos-rel g-brd-white-opacity-0_1 g-py-4">
+                <h4 class="h6 g-pr-20 mb-0">
+                  
+                    <a class="g-color-white-opacity-0_8 g-color-white--hover" href="/services/">Services</a>
+                  
+                  <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
+                </h4>
+              </li>
+            
+              <li class="g-pos-rel g-brd-white-opacity-0_1 g-py-4">
+                <h4 class="h6 g-pr-20 mb-0">
+                  
+                    <a class="g-color-white-opacity-0_8 g-color-white--hover" href="/industries/">Industries</a>
+                  
+                  <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
+                </h4>
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-lg-3 col-md-6 g-mb-40 g-mb-0--lg">
+        <div class="u-heading-v3-1 g-brd-white-opacity-0_3 g-mb-25">
+          <h2 class="u-heading-v3__title h6 g-brd-bottom g-brd-white-opacity-0_1 g-pb-10">Get in Contact</h2>
+        </div>
+
+        <ul class="list-unstyled g-mt-minus-10 mb-0">
+          <li class="g-pos-rel g-brd-white-opacity-0_1 g-py-3"><i class="icon-map"></i> <a class="g-color-white-opacity-0_8 g-color-white--hover" target="_blank" href="https://goo.gl/maps/dkREw5nbhasBzeNH6">701 Brazos St. Austin, TX</a></li>
+          <li class="g-pos-rel g-brd-white-opacity-0_1 g-py-3"><i class="icon-envelope"></i> <a class="g-color-white-opacity-0_8 g-color-white--hover" href="mailto:contact@reactive.io">contact@reactive.io</a></li>
+          <li class="g-pos-rel g-brd-white-opacity-0_1 g-py-3"><i class="icon-phone"></i> <a class="g-color-white-opacity-0_8 g-color-white--hover" href="tel:1-646-820-4411">646.820.4411</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="u-heading-v3-1 g-brd-white-opacity-0_3 g-mb-25">
+          <h2 class="u-heading-v3__title h6 g-brd-bottom g-brd-white-opacity-0_1 g-pb-10">Stay in Touch</h2>
+        </div>
+
+        <ul class="list-unstyled g-mt-minus-10 mb-0">
+          <li class="g-pos-rel g-brd-white-opacity-0_1 g-py-3"><i class="fa fa-fw fa-linkedin"></i> <a class="g-color-white-opacity-0_8 g-color-white--hover" target="_blank" title="LinkedIn" href="https://www.linkedin.com/company/reactive-io">/in/reactive-io</a></li>
+          <li class="g-pos-rel g-brd-white-opacity-0_1 g-py-3"><i class="fa fa-fw fa-github-alt"></i> <a class="g-color-white-opacity-0_8 g-color-white--hover" target="_blank" title="GitHub" href="https://github.com/reactive-io">@reactive-io</a></a></li>
+          <li class="g-pos-rel g-brd-white-opacity-0_1 g-py-3"><i class="fa fa-fw fa-twitter"></i> <a class="g-color-white-opacity-0_8 g-color-white--hover" target="_blank" title="Twitter" href="https://twitter.com/reactive_io">@reactive_io</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    </main>
+
+    
+<script src="/vendor/jquery/jquery.min.js"></script>
+
+    
+<script src="/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+
+    
+<script src="/vendor/popper.js/popper.min.js"></script>
+
+    
+<script src="/vendor/bootstrap/bootstrap.min.js"></script>
+
+
+    
+<script src="/vendor/appear.js"></script>
+
+    
+<script src="/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+
+    
+<script src="/vendor/fancybox/jquery.fancybox.min.js"></script>
+
+
+    
+<script src="/js/hs.core.js"></script>
+
+    
+<script src="/js/components/hs.header.js"></script>
+
+    
+<script src="/js/helpers/hs.hamburgers.js"></script>
+
+    
+<script src="/js/components/hs.tabs.js"></script>
+
+    
+<script src="/js/components/hs.popup.js"></script>
+
+    
+<script src="/js/components/hs.counter.js"></script>
+
+    
+<script src="/js/components/hs.go-to.js"></script>
+
+
+    <script>
+      $(document).on('ready', function () {
+        // initialization of tabs
+        $.HSCore.components.HSTabs.init('[role="tablist"]');
+
+        // initialization of popups
+        $.HSCore.components.HSPopup.init('.js-fancybox');
+
+        // initialization of counters
+        var counters = $.HSCore.components.HSCounter.init('[class*="js-counter"]');
+
+        // initialization of go to
+        $.HSCore.components.HSGoTo.init('.js-go-to');
+      });
+
+      $(window).on('load', function () {
+        // initialization of header
+        $.HSCore.components.HSHeader.init($('#js-header'));
+        $.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+        // initialization of HSMegaMenu component
+        $('.js-mega-menu').HSMegaMenu({
+          event: 'hover',
+          pageContainer: $('.container'),
+          breakpoint: 991
+        });
+      });
+
+      $(window).on('resize', function () {
+        setTimeout(function () {
+          $.HSCore.components.HSTabs.init('[role="tablist"]');
+        }, 200);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<h1 id="Fizzy-UI-utils"><a href="#Fizzy-UI-utils" class="headerlink" title="Fizzy UI utils"></a>Fizzy UI utils</h1><p>UI utility &amp; helper functions</p>
+<p>Used in <a href="http://flickity.metafizzy.co" target="_blank" rel="noopener">Flickity</a>, <a href="http://isotope.metafizzy.co" target="_blank" rel="noopener">Isotope</a>, <a href="http://masonry.desandro.com" target="_blank" rel="noopener">Masonry</a>, <a href="http://draggabilly.desandro.com" target="_blank" rel="noopener">Draggabilly</a></p>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><p>Bower: <code>bower install fizzy-ui-utils --save</code></p>
+<p>npm: <code>npm install fizzy-ui-utils --save</code></p>
+<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><pre><code class="js"><span class="comment">// fizzyUIUtils is the browser global</span>
+<span class="keyword">var</span> utils = fizzyUIUtils;
+
+<span class="comment">// ---- ---- //</span>
+
+utils.extend( a, b )
+<span class="comment">// extend object</span>
+
+utils.modulo( num, div )
+<span class="comment">// num [modulo] div</span>
+
+utils.makeArray( obj )
+<span class="comment">// make array from object</span>
+
+utils.removeFrom( ary, obj )
+<span class="comment">// remove object from array</span>
+
+utils.getParent( elem, selector )
+<span class="comment">// get parent element of an element, given a selector string</span>
+
+utils.getQueryElement( elem )
+<span class="comment">// if elem is a string, use it as a selector and return element</span>
+
+Class.prototype.handleEvent = utils.handleEvent;
+<span class="comment">// enable Class.onclick when element.addEventListener( 'click', this, false )</span>
+
+utils.filterFindElements( elems, selector )
+<span class="comment">// iterate through elems, filter and find all elements that match selector</span>
+
+utils.debounceMethod( Class, methodName, threhold )
+<span class="comment">// debounce a class method</span>
+
+utils.docReady( callback )
+<span class="comment">// trigger callback on document ready</span>
+
+utils.toDashed( str )
+<span class="comment">// 'camelCaseString' -&gt; 'camel-case-string'</span>
+
+utils.htmlInit( Class, namespace )
+<span class="comment">// on document ready, initialize Class on every element</span>
+<span class="comment">// that matches js-namespace</span>
+<span class="comment">// pass in JSON options from element's data-options-namespace attribute</span></code></pre>
+<hr>
+<p><a href="http://desandro.mit-license.org/" target="_blank" rel="noopener">MIT license</a>. Have at it.</p>
+<p>By <a href="http://metafizzy.co" target="_blank" rel="noopener">Metafizzy</a></p>

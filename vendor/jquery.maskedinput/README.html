@@ -1,0 +1,50 @@
+<h1 id="Masked-Input-Plugin-for-jQuery"><a href="#Masked-Input-Plugin-for-jQuery" class="headerlink" title="Masked Input Plugin for jQuery"></a>Masked Input Plugin for jQuery</h1><p><a href="https://travis-ci.org/digitalBush/jquery.maskedinput" target="_blank" rel="noopener"><img src="https://travis-ci.org/digitalBush/jquery.maskedinput.png" alt="Build Status"></a><br>Overview</p>
+<hr>
+<p>This is a masked input plugin for the jQuery javascript library. It allows a user to more easily enter fixed width input where you would like them to enter the data in a certain format (dates,phone numbers, etc). It has been tested on Internet Explorer, Firefox, Safari, Opera, and Chrome.  A mask is defined by a format made up of mask literals and mask definitions. Any character not in the definitions list below is considered a mask literal. Mask literals will be automatically entered for the user as they type and will not be able to be removed by the user.The following mask definitions are predefined:</p>
+<ul>
+<li>a - Represents an alpha character (A-Z,a-z)</li>
+<li>9 - Represents a numeric character (0-9)</li>
+<li>* - Represents an alphanumeric character (A-Z,a-z,0-9)</li>
+</ul>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><p>First, include the jQuery and masked input javascript files.</p>
+<pre><code class="html"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.js"</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.maskedinput.js"</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></code></pre>
+<p>Next, call the mask function for those items you wish to have masked.</p>
+<pre><code class="html">jQuery(function($){
+   $(&quot;#date&quot;).mask(&quot;99/99/9999&quot;);
+   $(&quot;#phone&quot;).mask(&quot;(999) 999-9999&quot;);
+   $(&quot;#tin&quot;).mask(&quot;99-9999999&quot;);
+   $(&quot;#ssn&quot;).mask(&quot;999-99-9999&quot;);
+});</code></pre>
+<p>Optionally, if you are not satisfied with the underscore (‘_’) character as a placeholder, you may pass an optional argument to the maskedinput method.</p>
+<pre><code class="html">jQuery(function($){
+   $(&quot;#product&quot;).mask(&quot;99/99/9999&quot;,{placeholder:&quot; &quot;});
+});</code></pre>
+<p>Optionally, if you would like to execute a function once the mask has been completed, you can specify that function as an optional argument to the maskedinput method.</p>
+<pre><code class="html">jQuery(function($){
+   $(&quot;#product&quot;).mask(&quot;99/99/9999&quot;,{completed:function(){alert(&quot;You typed the following: &quot;+this.val());}});
+});</code></pre>
+<p>Optionally, if you would like to disable the automatic discarding of the uncomplete input, you may pass an optional argument to the maskedinput method</p>
+<pre><code class="html">jQuery(function($){
+   $(&quot;#product&quot;).mask(&quot;99/99/9999&quot;,{autoclear: false});
+});</code></pre>
+<p>You can now supply your own mask definitions.</p>
+<pre><code class="html">jQuery(function($){
+   $.mask.definitions[&#39;~&#39;]=&#39;[+-]&#39;;
+   $(&quot;#eyescript&quot;).mask(&quot;~9.99 ~9.99 999&quot;);
+});</code></pre>
+<p>You can have part of your mask be optional. Anything listed after ‘?’ within the mask is considered optional user input. The common example for this is phone number + optional extension.</p>
+<pre><code class="html">jQuery(function($){
+   $(&quot;#phone&quot;).mask(&quot;(999) 999-9999? x99999&quot;);
+});</code></pre>
+<p>If your requirements aren’t met by the predefined placeholders, you can always add your own. For example, maybe you need a mask to only allow hexadecimal characters. You can add your own definition for a placeholder, say ‘h’, like so: <code>$.mask.definitions[&#39;h&#39;] = &quot;[A-Fa-f0-9]&quot;;</code> Then you can use that to mask for something like css colors in hex with a <code>mask &quot;#hhhhhh&quot;</code>.</p>
+<pre><code class="html">jQuery(function($){
+   $(&quot;#phone&quot;).mask(&quot;#hhhhhh&quot;);
+});</code></pre>
+<p>By design, this plugin will reject input which doesn’t complete the mask. You can bypass this by using a ‘?’ character at the position where you would like to consider input optional. For example, a mask of “(999) 999-9999? x99999” would require only the first 10 digits of a phone number with extension being optional.</p>
+<h2 id="Getting-the-bits"><a href="#Getting-the-bits" class="headerlink" title="Getting the bits"></a>Getting the bits</h2><p>We generally recommend that you use <a href="http://bower.io" target="_blank" rel="noopener">bower</a> to install jquery.maskedinput plugin.</p>
+<pre><code>$ bower install --save jquery.maskedinput</code></pre><h2 id="Setting-up-your-Developer-Environment"><a href="#Setting-up-your-Developer-Environment" class="headerlink" title="Setting up your Developer Environment"></a>Setting up your Developer Environment</h2><p>jQuery Masked Input uses <a href="http://www.nodejs.org" target="_blank" rel="noopener">NodeJS</a> and <a href="http://www.gruntjs.com" target="_blank" rel="noopener">GruntJS</a> as it’s developer platform and build automation tool.</p>
+<p>To get your environment setup correctly, you’ll need nodejs version 0.8.25 or greater installed. You’ll also need to install the grunt command line tool:</p>
+<pre><code>$ sudo npm install -g grunt-cli</code></pre><p>Once node is installed on your system all that you need to do is install the developer dependencies and run the grunt build:</p>
+<pre><code>$ npm install
+$ grunt</code></pre><p>All of the tests for jQuery Masked Input are run using the <a href="http://jasmine.github.io/" target="_blank" rel="noopener">jasmine</a> test runner.</p>
