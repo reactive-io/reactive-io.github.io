@@ -1,65 +1,72 @@
 <h1 id="EvEmitter"><a href="#EvEmitter" class="headerlink" title="EvEmitter"></a>EvEmitter</h1><p><em>Lil’ event emitter</em> — add a little pub/sub</p>
-<p>EvEmitter adds publish/subscribe pattern to a browser class. It’s a smaller version of <a href="https://github.com/Olical/EventEmitter" target="_blank" rel="noopener">Olical/EventEmitter</a>. That EventEmitter is full featured, widely used, and great. This EvEmitter has just the base event functionality to power the event API in libraries like <a href="http://isotope.metafizzy.co" target="_blank" rel="noopener">Isotope</a>, <a href="http://flickity.metafizzy.co" target="_blank" rel="noopener">Flickity</a>, <a href="http://masonry.desandro.com" target="_blank" rel="noopener">Masonry</a>, and <a href="http://imagesloaded.desandro.com" target="_blank" rel="noopener">imagesLoaded</a>.</p>
-<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><pre><code class="js"><span class="comment">// Inherit prototype, IE8+</span>
-MyClass.prototype = <span class="keyword">new</span> EvEmitter();
+<p>EvEmitter adds publish/subscribe pattern to a browser class. It’s a smaller version of <a href="https://github.com/Olical/EventEmitter">Olical/EventEmitter</a>. That EventEmitter is full featured, widely used, and great. This EvEmitter has just the base event functionality to power the event API in libraries like <a href="http://isotope.metafizzy.co/">Isotope</a>, <a href="http://flickity.metafizzy.co/">Flickity</a>, <a href="http://masonry.desandro.com/">Masonry</a>, and <a href="http://imagesloaded.desandro.com/">imagesLoaded</a>.</p>
+<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><pre><code class="js">// Inherit prototype, IE8+
+MyClass.prototype = new EvEmitter();
 
-<span class="comment">// Inherit prototype, IE9+</span>
-MyClass.prototype = <span class="built_in">Object</span>.create( EvEmitter.prototype );
+// Inherit prototype, IE9+
+MyClass.prototype = Object.create( EvEmitter.prototype );
 
-<span class="comment">// Mixin prototype</span>
+// Mixin prototype
 _.extend( MyClass.prototype, EvEmitter.prototype );
 
-<span class="comment">// single instance</span>
-<span class="keyword">var</span> emitter = <span class="keyword">new</span> EvEmitter();</code></pre>
+// single instance
+var emitter = new EvEmitter();
+</code></pre>
 <h3 id="on"><a href="#on" class="headerlink" title="on"></a>on</h3><p>Add an event listener.</p>
-<pre><code class="js">emitter.on( eventName, listener )</code></pre>
+<pre><code class="js">emitter.on( eventName, listener )
+</code></pre>
 <ul>
 <li><code>eventName</code> - <em>String</em> - name of the event</li>
 <li><code>listener</code> - <em>Function</em></li>
 </ul>
 <h3 id="off"><a href="#off" class="headerlink" title="off"></a>off</h3><p>Remove an event listener.</p>
-<pre><code class="js">emitter.off( eventName, listener )</code></pre>
+<pre><code class="js">emitter.off( eventName, listener )
+</code></pre>
 <h3 id="once"><a href="#once" class="headerlink" title="once"></a>once</h3><p>Add an event listener to be triggered only once.</p>
-<pre><code class="js">emitter.once( eventName, listener )</code></pre>
+<pre><code class="js">emitter.once( eventName, listener )
+</code></pre>
 <h3 id="emitEvent"><a href="#emitEvent" class="headerlink" title="emitEvent"></a>emitEvent</h3><p>Trigger an event.</p>
-<pre><code class="js">emitter.emitEvent( eventName, args )</code></pre>
+<pre><code class="js">emitter.emitEvent( eventName, args )
+</code></pre>
 <ul>
 <li><code>eventName</code> - <em>String</em> - name of the event</li>
 <li><code>args</code> - <em>Array</em> - arguments passed to listeners</li>
 </ul>
 <h3 id="allOff"><a href="#allOff" class="headerlink" title="allOff"></a>allOff</h3><p>Removes all event listeners.</p>
-<pre><code class="js">emitter.allOff()</code></pre>
-<h2 id="Code-example"><a href="#Code-example" class="headerlink" title="Code example"></a>Code example</h2><pre><code class="js"><span class="comment">// create event emitter</span>
-<span class="keyword">var</span> emitter = <span class="keyword">new</span> EventEmitter();
+<pre><code class="js">emitter.allOff()
+</code></pre>
+<h2 id="Code-example"><a href="#Code-example" class="headerlink" title="Code example"></a>Code example</h2><pre><code class="js">// create event emitter
+var emitter = new EventEmitter();
 
-<span class="comment">// listeners</span>
-<span class="function"><span class="keyword">function</span> <span class="title">hey</span>(<span class="params"> a, b, c </span>) </span>{
-  <span class="built_in">console</span>.log( <span class="string">'Hey'</span>, a, b, c )
+// listeners
+function hey( a, b, c ) {
+  console.log( &#39;Hey&#39;, a, b, c )
 }
 
-<span class="function"><span class="keyword">function</span> <span class="title">ho</span>(<span class="params"> a, b, c </span>) </span>{
-  <span class="built_in">console</span>.log( <span class="string">'Ho'</span>, a, b, c )
+function ho( a, b, c ) {
+  console.log( &#39;Ho&#39;, a, b, c )
 }
 
-<span class="function"><span class="keyword">function</span> <span class="title">letsGo</span>(<span class="params"> a, b, c </span>) </span>{
-  <span class="built_in">console</span>.log( <span class="string">'Lets go'</span>, a, b, c )
+function letsGo( a, b, c ) {
+  console.log( &#39;Lets go&#39;, a, b, c )
 }
 
-<span class="comment">// bind listeners</span>
-emitter.on( <span class="string">'rock'</span>, hey )
-emitter.once( <span class="string">'rock'</span>, ho )
-<span class="comment">// trigger letsGo once</span>
-emitter.on( <span class="string">'rock'</span>, letsGo )
+// bind listeners
+emitter.on( &#39;rock&#39;, hey )
+emitter.once( &#39;rock&#39;, ho )
+// trigger letsGo once
+emitter.on( &#39;rock&#39;, letsGo )
 
-<span class="comment">// emit event</span>
-emitter.emitEvent( <span class="string">'rock'</span>, [ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> ] )
-<span class="comment">// =&gt; 'Hey', 1, 2, 3</span>
-<span class="comment">// =&gt; 'Ho', 1, 2, 3</span>
-<span class="comment">// =&gt; 'Lets go', 1, 2, 3</span>
+// emit event
+emitter.emitEvent( &#39;rock&#39;, [ 1, 2, 3 ] )
+// =&gt; &#39;Hey&#39;, 1, 2, 3
+// =&gt; &#39;Ho&#39;, 1, 2, 3
+// =&gt; &#39;Lets go&#39;, 1, 2, 3
 
-<span class="comment">// unbind</span>
-emitter.off( <span class="string">'rock'</span>, ho )
+// unbind
+emitter.off( &#39;rock&#39;, ho )
 
-emitter.emitEvent( <span class="string">'rock'</span>, [ <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span> ] )
-<span class="comment">// =&gt; 'Hey' 4, 5, 6</span></code></pre>
-<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>EvEmitter is released under the <a href="http://desandro.mit-license.org/" target="_blank" rel="noopener">MIT License</a>. Have at it.</p>
+emitter.emitEvent( &#39;rock&#39;, [ 4, 5, 6 ] )
+// =&gt; &#39;Hey&#39; 4, 5, 6
+</code></pre>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>EvEmitter is released under the <a href="http://desandro.mit-license.org/">MIT License</a>. Have at it.</p>

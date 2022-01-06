@@ -1,49 +1,50 @@
 <h1 id="Fizzy-UI-utils"><a href="#Fizzy-UI-utils" class="headerlink" title="Fizzy UI utils"></a>Fizzy UI utils</h1><p>UI utility &amp; helper functions</p>
-<p>Used in <a href="http://flickity.metafizzy.co" target="_blank" rel="noopener">Flickity</a>, <a href="http://isotope.metafizzy.co" target="_blank" rel="noopener">Isotope</a>, <a href="http://masonry.desandro.com" target="_blank" rel="noopener">Masonry</a>, <a href="http://draggabilly.desandro.com" target="_blank" rel="noopener">Draggabilly</a></p>
+<p>Used in <a href="http://flickity.metafizzy.co/">Flickity</a>, <a href="http://isotope.metafizzy.co/">Isotope</a>, <a href="http://masonry.desandro.com/">Masonry</a>, <a href="http://draggabilly.desandro.com/">Draggabilly</a></p>
 <h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><p>Bower: <code>bower install fizzy-ui-utils --save</code></p>
 <p>npm: <code>npm install fizzy-ui-utils --save</code></p>
-<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><pre><code class="js"><span class="comment">// fizzyUIUtils is the browser global</span>
-<span class="keyword">var</span> utils = fizzyUIUtils;
+<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><pre><code class="js">// fizzyUIUtils is the browser global
+var utils = fizzyUIUtils;
 
-<span class="comment">// ---- ---- //</span>
+// ---- ---- //
 
 utils.extend( a, b )
-<span class="comment">// extend object</span>
+// extend object
 
 utils.modulo( num, div )
-<span class="comment">// num [modulo] div</span>
+// num [modulo] div
 
 utils.makeArray( obj )
-<span class="comment">// make array from object</span>
+// make array from object
 
 utils.removeFrom( ary, obj )
-<span class="comment">// remove object from array</span>
+// remove object from array
 
 utils.getParent( elem, selector )
-<span class="comment">// get parent element of an element, given a selector string</span>
+// get parent element of an element, given a selector string
 
 utils.getQueryElement( elem )
-<span class="comment">// if elem is a string, use it as a selector and return element</span>
+// if elem is a string, use it as a selector and return element
 
 Class.prototype.handleEvent = utils.handleEvent;
-<span class="comment">// enable Class.onclick when element.addEventListener( 'click', this, false )</span>
+// enable Class.onclick when element.addEventListener( &#39;click&#39;, this, false )
 
 utils.filterFindElements( elems, selector )
-<span class="comment">// iterate through elems, filter and find all elements that match selector</span>
+// iterate through elems, filter and find all elements that match selector
 
 utils.debounceMethod( Class, methodName, threhold )
-<span class="comment">// debounce a class method</span>
+// debounce a class method
 
 utils.docReady( callback )
-<span class="comment">// trigger callback on document ready</span>
+// trigger callback on document ready
 
 utils.toDashed( str )
-<span class="comment">// 'camelCaseString' -&gt; 'camel-case-string'</span>
+// &#39;camelCaseString&#39; -&gt; &#39;camel-case-string&#39;
 
 utils.htmlInit( Class, namespace )
-<span class="comment">// on document ready, initialize Class on every element</span>
-<span class="comment">// that matches js-namespace</span>
-<span class="comment">// pass in JSON options from element's data-options-namespace attribute</span></code></pre>
+// on document ready, initialize Class on every element
+// that matches js-namespace
+// pass in JSON options from element&#39;s data-options-namespace attribute
+</code></pre>
 <hr>
-<p><a href="http://desandro.mit-license.org/" target="_blank" rel="noopener">MIT license</a>. Have at it.</p>
-<p>By <a href="http://metafizzy.co" target="_blank" rel="noopener">Metafizzy</a></p>
+<p><a href="http://desandro.mit-license.org/">MIT license</a>. Have at it.</p>
+<p>By <a href="http://metafizzy.co/">Metafizzy</a></p>

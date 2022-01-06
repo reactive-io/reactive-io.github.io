@@ -1,14 +1,18 @@
 <h1 id="jQuery-easypin"><a href="#jQuery-easypin" class="headerlink" title="jQuery easypin"></a>jQuery easypin</h1><p>Simple and fast image pinning plugin. There are dependencies with the library jQuery easing plugin.<br>Supported lowest jQuery version 1.8</p>
-<h1 id="DEMO"><a href="#DEMO" class="headerlink" title="DEMO"></a>DEMO</h1><p><a href="http://atayahmet.github.io/jquery.easypin/demo1.html" target="_blank" rel="noopener">Demo Page 1 (responsive)</a></p>
-<p><a href="http://atayahmet.github.io/jquery.easypin/demo2.html" target="_blank" rel="noopener">Demo Page 2 </a></p>
-<p><a href="http://atayahmet.github.io/jquery.easypin/demo3.html" target="_blank" rel="noopener">Demo Page 3 </a></p>
-<h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><h3 id="bower-install"><a href="#bower-install" class="headerlink" title="bower install"></a>bower install</h3><pre><code class="sh">bower install jquery.easypin</code></pre>
-<h3 id="npm-install"><a href="#npm-install" class="headerlink" title="npm install"></a>npm install</h3><pre><code class="sh">npm install jquery.easypin</code></pre>
+<h1 id="DEMO"><a href="#DEMO" class="headerlink" title="DEMO"></a>DEMO</h1><p><a href="http://atayahmet.github.io/jquery.easypin/demo1.html">Demo Page 1 (responsive)</a></p>
+<p><a href="http://atayahmet.github.io/jquery.easypin/demo2.html">Demo Page 2 </a></p>
+<p><a href="http://atayahmet.github.io/jquery.easypin/demo3.html">Demo Page 3 </a></p>
+<h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><h3 id="bower-install"><a href="#bower-install" class="headerlink" title="bower install"></a>bower install</h3><pre><code class="sh">bower install jquery.easypin
+</code></pre>
+<h3 id="npm-install"><a href="#npm-install" class="headerlink" title="npm install"></a>npm install</h3><pre><code class="sh">npm install jquery.easypin
+</code></pre>
 <h3 id="Load-libraries"><a href="#Load-libraries" class="headerlink" title="Load libraries"></a>Load libraries</h3><p>First, include the jQuery and jQuery easing plugin javascript files.</p>
-<pre><code class="html"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.easing.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.easypin.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></code></pre>
-<h3 id="Pin-picture"><a href="#Pin-picture" class="headerlink" title="Pin picture:"></a>Pin picture:</h3><pre><code class="html"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"example.jpg"</span> <span class="attr">class</span>=<span class="string">"pin"</span> <span class="attr">width</span>=<span class="string">"800"</span> <span class="attr">easypin-id</span>=<span class="string">"example_image1"</span> /&gt;</span></code></pre>
+<pre><code class="html">&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;jquery.easing.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;jquery.easypin.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h3 id="Pin-picture"><a href="#Pin-picture" class="headerlink" title="Pin picture:"></a>Pin picture:</h3><pre><code class="html">&lt;img src=&quot;example.jpg&quot; class=&quot;pin&quot; width=&quot;800&quot; easypin-id=&quot;example_image1&quot; /&gt;
+</code></pre>
 <table>
 <thead>
 <tr>
@@ -23,12 +27,13 @@
 <td>It will be the default value if not defined</td>
 </tr>
 </tbody></table>
-<h3 id="Dialog-window-for-pin-contents"><a href="#Dialog-window-for-pin-contents" class="headerlink" title="Dialog window for pin contents"></a>Dialog window for pin contents</h3><pre><code class="html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"easy-modal"</span> <span class="attr">style</span>=<span class="string">"display:none;"</span> <span class="attr">modal-position</span>=<span class="string">"free"</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">form</span>&gt;</span>
-        type something: <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"content"</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span>
-        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"save pin!"</span> <span class="attr">class</span>=<span class="string">"easy-submit"</span>&gt;</span>
-    <span class="tag">&lt;/<span class="name">form</span>&gt;</span>
-<span class="tag">&lt;/<span class="name">div</span>&gt;</span></code></pre>
+<h3 id="Dialog-window-for-pin-contents"><a href="#Dialog-window-for-pin-contents" class="headerlink" title="Dialog window for pin contents"></a>Dialog window for pin contents</h3><pre><code class="html">&lt;div class=&quot;easy-modal&quot; style=&quot;display:none;&quot; modal-position=&quot;free&quot;&gt;
+    &lt;form&gt;
+        type something: &lt;input name=&quot;content&quot; type=&quot;text&quot;&gt;
+        &lt;input type=&quot;button&quot; value=&quot;save pin!&quot; class=&quot;easy-submit&quot;&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+</code></pre>
 <table>
 <thead>
 <tr>
@@ -48,9 +53,10 @@
 <td>Dialog window free position (default: none)</td>
 </tr>
 </tbody></table>
-<h3 id="Popover"><a href="#Popover" class="headerlink" title="Popover"></a>Popover</h3><pre><code class="html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"display:none;"</span> <span class="attr">width</span>=<span class="string">"130"</span> <span class="attr">shadow</span>=<span class="string">"true"</span> <span class="attr">popover</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"width:100%;text-align:center;"</span>&gt;</span>{[content]}<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="name">div</span>&gt;</span></code></pre>
+<h3 id="Popover"><a href="#Popover" class="headerlink" title="Popover"></a>Popover</h3><pre><code class="html">&lt;div style=&quot;display:none;&quot; width=&quot;130&quot; shadow=&quot;true&quot; popover&gt;
+    &lt;div style=&quot;width:100%;text-align:center;&quot;&gt;{[content]}&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 <table>
 <thead>
 <tr>
@@ -75,48 +81,54 @@
 <td>Popover show style (default: false)</td>
 </tr>
 </tbody></table>
-<h3 id="Initialize-the-pictures"><a href="#Initialize-the-pictures" class="headerlink" title="Initialize the pictures:"></a>Initialize the pictures:</h3><pre><code class="javascript"><span class="comment">// Back-end pin process</span>
-$(<span class="string">'.pin'</span>).easypin();</code></pre>
+<h3 id="Initialize-the-pictures"><a href="#Initialize-the-pictures" class="headerlink" title="Initialize the pictures:"></a>Initialize the pictures:</h3><pre><code class="javascript">// Back-end pin process
+$(&#39;.pin&#39;).easypin();
+</code></pre>
 <p>To access the coordinates after pinning:</p>
-<pre><code class="javascript"><span class="keyword">var</span> $instance = $(<span class="string">'.pin'</span>).easypin({
-    done: <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>{
-        <span class="keyword">return</span> <span class="literal">true</span>;
+<pre><code class="javascript">var $instance = $(&#39;.pin&#39;).easypin({
+    done: function(element) {
+        return true;
     }
 });
 
-<span class="comment">// set the 'get.coordinates' event</span>
-$instance.easypin.event( <span class="string">"get.coordinates"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">$instance, data, params </span>) </span>{
+// set the &#39;get.coordinates&#39; event
+$instance.easypin.event( &quot;get.coordinates&quot;, function($instance, data, params ) {
 
-    <span class="built_in">console</span>.log(data, params);
+    console.log(data, params);
 
-});</code></pre>
+});
+</code></pre>
 <p>Then you can run this event with a button click event</p>
-<pre><code class="html"><span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">"coords"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"Get coordinates!"</span> /&gt;</span></code></pre>
-<pre><code class="javascript">$( <span class="string">".coords"</span> ).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>{
-    $instance.easypin.fire( <span class="string">"get.coordinates"</span>, {<span class="attr">param1</span>: <span class="number">1</span>, <span class="attr">param2</span>: <span class="number">2</span>, <span class="attr">param3</span>: <span class="number">3</span>}, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>{
-        <span class="keyword">return</span> <span class="built_in">JSON</span>.stringify(data);
+<pre><code class="html">&lt;input class=&quot;coords&quot; type=&quot;button&quot; value=&quot;Get coordinates!&quot; /&gt;
+</code></pre>
+<pre><code class="javascript">$( &quot;.coords&quot; ).click(function(e) {
+    $instance.easypin.fire( &quot;get.coordinates&quot;, {param1: 1, param2: 2, param3: 3}, function(data) {
+        return JSON.stringify(data);
     });
-});</code></pre>
+});
+</code></pre>
 <p>We pass parameters when calling the above coordinate the event. Before the callback to run.</p>
 <p><a href="#easypin-options">Click for .easypin({}) options</a></p>
 <h1 id="easypinShow"><a href="#easypinShow" class="headerlink" title=".easypinShow()"></a>.easypinShow()</h1><p> We do first pin on the picture, now we show these pins to users on user interface.</p>
 <p><strong>Pin image:</strong></p>
-<pre><code class="html"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"example.jpg"</span> <span class="attr">class</span>=<span class="string">"pin"</span> <span class="attr">width</span>=<span class="string">"800"</span> <span class="attr">easypin-id</span>=<span class="string">"example_image1"</span> /&gt;</span></code></pre>
+<pre><code class="html">&lt;img src=&quot;example.jpg&quot; class=&quot;pin&quot; width=&quot;800&quot; easypin-id=&quot;example_image1&quot; /&gt;
+</code></pre>
 <blockquote>
 <p><strong>Note:</strong> If you want to get the width of the parent element’s do not need define</p>
 </blockquote>
 <p><strong>Pin container and popover template:</strong></p>
-<pre><code class="html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"display:none;"</span> <span class="attr">easypin-tpl</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">popover</span>&gt;</span>
-        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"width:140px;height:auto;background-color:orange;"</span>&gt;</span>
+<pre><code class="html">&lt;div style=&quot;display:none;&quot; easypin-tpl&gt;
+    &lt;popover&gt;
+        &lt;div style=&quot;width:140px;height:auto;background-color:orange;&quot;&gt;
             {[content]}
-        <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-    <span class="tag">&lt;/<span class="name">popover</span>&gt;</span>
+        &lt;/div&gt;
+    &lt;/popover&gt;
 
-    <span class="tag">&lt;<span class="name">marker</span>&gt;</span>
-        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"border:solid 1px #000;width:20px;height:20px;background-color:red;"</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-    <span class="tag">&lt;/<span class="name">marker</span>&gt;</span>
-<span class="tag">&lt;/<span class="name">div</span>&gt;</span></code></pre>
+    &lt;marker&gt;
+        &lt;div style=&quot;border:solid 1px #000;width:20px;height:20px;background-color:red;&quot;&gt;&amp;nbsp;&lt;/div&gt;
+    &lt;/marker&gt;
+&lt;/div&gt;
+</code></pre>
 <table>
 <thead>
 <tr>
@@ -142,22 +154,23 @@ $instance.easypin.event( <span class="string">"get.coordinates"</span>, <span cl
 </tr>
 </tbody></table>
 <p><strong>and run the .easypinShow() method:</strong></p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypinShow({
+<pre><code class="javascript">$(&#39;.pin&#39;).easypinShow({
     data: {
-            <span class="string">"example_image1"</span>:{
-            <span class="string">"0"</span>:{
-                <span class="string">"content"</span>:<span class="string">"Hello World!"</span>,
-                <span class="string">"coords"</span>:{
-                    <span class="string">"lat"</span>:<span class="string">"530"</span>,
-                    <span class="string">"long"</span>:<span class="string">"179"</span>
+            &quot;example_image1&quot;:{
+            &quot;0&quot;:{
+                &quot;content&quot;:&quot;Hello World!&quot;,
+                &quot;coords&quot;:{
+                    &quot;lat&quot;:&quot;530&quot;,
+                    &quot;long&quot;:&quot;179&quot;
                 }
             },
-            <span class="string">"canvas"</span>:{
-                <span class="string">"src"</span>:<span class="string">"example.jpg"</span>,<span class="string">"width"</span>:<span class="string">"800"</span>,<span class="string">"height"</span>:<span class="string">"562"</span>
+            &quot;canvas&quot;:{
+                &quot;src&quot;:&quot;example.jpg&quot;,&quot;width&quot;:&quot;800&quot;,&quot;height&quot;:&quot;562&quot;
             }
         }
     }
-});</code></pre>
+});
+</code></pre>
 <p>That’s it!</p>
 <h1 id="easypin-options"><a href="#easypin-options" class="headerlink" title=".easypin({}) options"></a>.easypin({}) options</h1><table>
 <thead>
@@ -229,98 +242,110 @@ $instance.easypin.event( <span class="string">"get.coordinates"</span>, <span cl
 </tr>
 </tbody></table>
 <h4 id="init"><a href="#init" class="headerlink" title="init"></a>init</h4><p>Initialize the pin coordinates.</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypin({
+<pre><code class="javascript">$(&#39;.pin&#39;).easypin({
     init: {
-        <span class="string">"example_image1"</span>:{
-            <span class="string">"0"</span>:{
-                <span class="string">"content"</span>:<span class="string">"Captan America"</span>,
-                <span class="string">"coords"</span>:{
-                    <span class="string">"lat"</span>:<span class="string">"530"</span>,
-                    <span class="string">"long"</span>:<span class="string">"179"</span>
+        &quot;example_image1&quot;:{
+            &quot;0&quot;:{
+                &quot;content&quot;:&quot;Captan America&quot;,
+                &quot;coords&quot;:{
+                    &quot;lat&quot;:&quot;530&quot;,
+                    &quot;long&quot;:&quot;179&quot;
                 }
             },
-            <span class="string">"canvas"</span>:{
-                <span class="string">"src"</span>:<span class="string">"example.jpg"</span>,<span class="string">"width"</span>:<span class="string">"1000"</span>,<span class="string">"height"</span>:<span class="string">"562"</span>
+            &quot;canvas&quot;:{
+                &quot;src&quot;:&quot;example.jpg&quot;,&quot;width&quot;:&quot;1000&quot;,&quot;height&quot;:&quot;562&quot;
             }
         }
     }
-});</code></pre>
+});
+</code></pre>
 <h4 id="markerSrc"><a href="#markerSrc" class="headerlink" title="markerSrc"></a>markerSrc</h4><p>Change the default marker image</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypin({
-    markerSrc: <span class="string">'path/or/url/example-marker.jpg'</span>
-});</code></pre>
+<pre><code class="javascript">$(&#39;.pin&#39;).easypin({
+    markerSrc: &#39;path/or/url/example-marker.jpg&#39;
+});
+</code></pre>
 <h4 id="modalWidth"><a href="#modalWidth" class="headerlink" title="modalWidth"></a>modalWidth</h4><p>Change the default modal width</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypin({
-    modalWidth: <span class="number">300</span>
-});</code></pre>
+<pre><code class="javascript">$(&#39;.pin&#39;).easypin({
+    modalWidth: 300
+});
+</code></pre>
 <h4 id="editSrc"><a href="#editSrc" class="headerlink" title="editSrc"></a>editSrc</h4><p>Change the default edit button image</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypin({
-    editSrc: <span class="string">'path/or/url/example-edit.jpg'</span>
-});</code></pre>
+<pre><code class="javascript">$(&#39;.pin&#39;).easypin({
+    editSrc: &#39;path/or/url/example-edit.jpg&#39;
+});
+</code></pre>
 <h4 id="deleteSrc"><a href="#deleteSrc" class="headerlink" title="deleteSrc"></a>deleteSrc</h4><p>Change the default delete button image</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypin({
-    deleteSrc: <span class="string">'path/or/url/example-delete.jpg'</span>
-});</code></pre>
+<pre><code class="javascript">$(&#39;.pin&#39;).easypin({
+    deleteSrc: &#39;path/or/url/example-delete.jpg&#39;
+});
+</code></pre>
 <h4 id="popover"><a href="#popover" class="headerlink" title="popover"></a>popover</h4><p>Set callback all template variables</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypin({
+<pre><code class="javascript">$(&#39;.pin&#39;).easypin({
     popover: {
-        content: <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>{
-            <span class="keyword">return</span> value.replace(<span class="regexp">/\s+/g</span>, <span class="string">' '</span>);
+        content: function(value) {
+            return value.replace(/\s+/g, &#39; &#39;);
         }
     }
-});</code></pre>
+});
+</code></pre>
 <blockquote>
 <p>It <strong>content</strong> variable is form input name</p>
 </blockquote>
 <h4 id="popoverStyle"><a href="#popoverStyle" class="headerlink" title="popoverStyle"></a>popoverStyle</h4><p>Popover styles (it just pass to jquery .css() method)</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypin({
+<pre><code class="javascript">$(&#39;.pin&#39;).easypin({
     popover: {
-        content: <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>{
-            <span class="keyword">return</span> value.replace(<span class="regexp">/\s+/g</span>, <span class="string">' '</span>);
+        content: function(value) {
+            return value.replace(/\s+/g, &#39; &#39;);
         }
     },
     popoverStyle: {
-        <span class="string">'background-color'</span>: <span class="string">'orange'</span>,
-        <span class="string">'color'</span>: <span class="string">'black'</span>
+        &#39;background-color&#39;: &#39;orange&#39;,
+        &#39;color&#39;: &#39;black&#39;
     }
-});</code></pre>
+});
+</code></pre>
 <h4 id="limit"><a href="#limit" class="headerlink" title="limit"></a>limit</h4><p>Limited pin (default 0) 0 for limitless</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypin({
-    limit: <span class="number">2</span>
-});</code></pre>
+<pre><code class="javascript">$(&#39;.pin&#39;).easypin({
+    limit: 2
+});
+</code></pre>
 <blockquote>
 <p>Set 0 for limitless pin</p>
 </blockquote>
 <h4 id="exceeded"><a href="#exceeded" class="headerlink" title="exceeded()"></a>exceeded()</h4><p>Limit exceeded event</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypin({
-    limit: <span class="number">2</span>,
-    exceeded: <span class="function"><span class="keyword">function</span>(<span class="params">type</span>) </span>{
-        <span class="comment">// do samething...</span>
+<pre><code class="javascript">$(&#39;.pin&#39;).easypin({
+    limit: 2,
+    exceeded: function(type) {
+        // do samething...
     }
-});</code></pre>
+});
+</code></pre>
 <h4 id="drop"><a href="#drop" class="headerlink" title="drop()"></a>drop()</h4><p>Pin dropped event</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypin({
-    drop: <span class="function"><span class="keyword">function</span>(<span class="params">x, y, element</span>) </span>{
-        <span class="built_in">console</span>.log(x, y, element);
+<pre><code class="javascript">$(&#39;.pin&#39;).easypin({
+    drop: function(x, y, element) {
+        console.log(x, y, element);
     }
-});</code></pre>
+});
+</code></pre>
 <h4 id="drag"><a href="#drag" class="headerlink" title="drag()"></a>drag()</h4><p>Pin dragging event</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypin({
-    drop: <span class="function"><span class="keyword">function</span>(<span class="params">x, y, element</span>) </span>{
-        <span class="built_in">console</span>.log(x, y, element);
+<pre><code class="javascript">$(&#39;.pin&#39;).easypin({
+    drop: function(x, y, element) {
+        console.log(x, y, element);
     },
-    drag: <span class="function"><span class="keyword">function</span>(<span class="params">x, y, element</span>) </span>{
-        <span class="built_in">console</span>.log(x, y, element);
+    drag: function(x, y, element) {
+        console.log(x, y, element);
     }
-});</code></pre>
+});
+</code></pre>
 <h4 id="done"><a href="#done" class="headerlink" title="done()"></a>done()</h4><p>Closing of the dialog window is depend to this function. Return true if the result dialog window will be closed</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypin({
-    done: <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>{
+<pre><code class="javascript">$(&#39;.pin&#39;).easypin({
+    done: function(element) {
 
-        <span class="keyword">return</span> <span class="literal">true</span>;
+        return true;
 
     }
-});</code></pre>
+});
+</code></pre>
 <blockquote>
 <p>Will return the form objects if the dialog box contains the form objects. Otherwise the dialog box will return the objects</p>
 </blockquote>
@@ -369,135 +394,142 @@ $instance.easypin.event( <span class="string">"get.coordinates"</span>, <span cl
 </tr>
 </tbody></table>
 <h4 id="data"><a href="#data" class="headerlink" title="data"></a>data</h4><p>Pin data and coordinates</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypinShow({
+<pre><code class="javascript">$(&#39;.pin&#39;).easypinShow({
     data: {
-        <span class="string">"example_image1"</span>:{
-            <span class="string">"0"</span>:{
-                <span class="string">"content"</span>:<span class="string">"Hello World!"</span>,
-                <span class="string">"coords"</span>:{
-                    <span class="string">"lat"</span>:<span class="string">"530"</span>,
-                    <span class="string">"long"</span>:<span class="string">"179"</span>
+        &quot;example_image1&quot;:{
+            &quot;0&quot;:{
+                &quot;content&quot;:&quot;Hello World!&quot;,
+                &quot;coords&quot;:{
+                    &quot;lat&quot;:&quot;530&quot;,
+                    &quot;long&quot;:&quot;179&quot;
                 }
             },
-            <span class="string">"canvas"</span>:{
-                <span class="string">"src"</span>:<span class="string">"example.jpg"</span>,<span class="string">"width"</span>:<span class="string">"800"</span>,<span class="string">"height"</span>:<span class="string">"562"</span>
+            &quot;canvas&quot;:{
+                &quot;src&quot;:&quot;example.jpg&quot;,&quot;width&quot;:&quot;800&quot;,&quot;height&quot;:&quot;562&quot;
             }
         }
     }
-});</code></pre>
+});
+</code></pre>
 <h3 id="responsive"><a href="#responsive" class="headerlink" title="responsive"></a>responsive</h3><p>Reponsive canvas for mobile (dfault: false)</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypinShow({
-    data: {<span class="comment">/*json object*/</span>},
-    responsive: <span class="literal">true</span>
-});</code></pre>
+<pre><code class="javascript">$(&#39;.pin&#39;).easypinShow({
+    data: {/*json object*/},
+    responsive: true
+});
+</code></pre>
 <h3 id="variables"><a href="#variables" class="headerlink" title="variables"></a>variables</h3><p>Reponsive canvas for mobile</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypinShow({
-    data: {<span class="comment">/*json object*/</span>},
-    responsive: <span class="literal">true</span>,
+<pre><code class="javascript">$(&#39;.pin&#39;).easypinShow({
+    data: {/*json object*/},
+    responsive: true,
     variables: {
-        content: <span class="function"><span class="keyword">function</span>(<span class="params">canvas_id, pin_id, data</span>) </span>{
+        content: function(canvas_id, pin_id, data) {
 
-            <span class="comment">// do something...</span>
-            <span class="comment">// and return</span>
-            <span class="keyword">return</span> data;
+            // do something...
+            // and return
+            return data;
         }
     }
-});</code></pre>
+});
+</code></pre>
 <blockquote>
 <p><strong>content</strong> is a template variable.</p>
 </blockquote>
 <h3 id="popover-1"><a href="#popover-1" class="headerlink" title="popover"></a>popover</h3><p>There is two child element. show/animate (default: false)</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypinShow({
-    data: {<span class="comment">/*json object*/</span>},
-    responsive: <span class="literal">true</span>,
+<pre><code class="javascript">$(&#39;.pin&#39;).easypinShow({
+    data: {/*json object*/},
+    responsive: true,
     variables: {
-        content: <span class="function"><span class="keyword">function</span>(<span class="params">canvas_id, pin_id, data</span>) </span>{
+        content: function(canvas_id, pin_id, data) {
 
-            <span class="comment">// do something...</span>
-            <span class="comment">// and return</span>
-            <span class="keyword">return</span> data;
+            // do something...
+            // and return
+            return data;
         }
     },
     popover: {
-        show: <span class="literal">true</span>,
-        animate: <span class="literal">true</span>
+        show: true,
+        animate: true
     }
-});</code></pre>
+});
+</code></pre>
 <h3 id="each"><a href="#each" class="headerlink" title="each()"></a>each()</h3><p>Each element works before replacing.</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypinShow({
-    data: {<span class="comment">/*json object*/</span>},
-    responsive: <span class="literal">true</span>,
+<pre><code class="javascript">$(&#39;.pin&#39;).easypinShow({
+    data: {/*json object*/},
+    responsive: true,
     variables: {
-        content: <span class="function"><span class="keyword">function</span>(<span class="params">canvas_id, pin_id, data</span>) </span>{
+        content: function(canvas_id, pin_id, data) {
 
-            <span class="comment">// do something...</span>
-            <span class="comment">// and return</span>
-            <span class="keyword">return</span> data;
+            // do something...
+            // and return
+            return data;
         }
     },
     popover: {
-        show: <span class="literal">true</span>,
-        animate: <span class="literal">true</span>
+        show: true,
+        animate: true
     },
-    each: <span class="function"><span class="keyword">function</span>(<span class="params">index, data</span>) </span>{
+    each: function(index, data) {
 
-        <span class="comment">// do something</span>
-        <span class="comment">// and return</span>
-        <span class="keyword">return</span> data;
+        // do something
+        // and return
+        return data;
     }
-});</code></pre>
+});
+</code></pre>
 <h3 id="error"><a href="#error" class="headerlink" title="error()"></a>error()</h3><p>Process error event</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypinShow({
-    data: {<span class="comment">/*json object*/</span>},
-    responsive: <span class="literal">true</span>,
+<pre><code class="javascript">$(&#39;.pin&#39;).easypinShow({
+    data: {/*json object*/},
+    responsive: true,
     variables: {
-        content: <span class="function"><span class="keyword">function</span>(<span class="params">canvas_id, pin_id, data</span>) </span>{
+        content: function(canvas_id, pin_id, data) {
 
-            <span class="comment">// do something...</span>
-            <span class="comment">// and return</span>
-            <span class="keyword">return</span> data;
+            // do something...
+            // and return
+            return data;
         }
     },
     popover: {
-        show: <span class="literal">true</span>,
-        animate: <span class="literal">true</span>
+        show: true,
+        animate: true
     },
-    each: <span class="function"><span class="keyword">function</span>(<span class="params">index, data</span>) </span>{
+    each: function(index, data) {
 
-        <span class="comment">// do something</span>
-        <span class="comment">// and return</span>
-        <span class="keyword">return</span> data;
+        // do something
+        // and return
+        return data;
     },
-    error: <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>{
-        <span class="comment">// do something...</span>
+    error: function(e) {
+        // do something...
     }
-});</code></pre>
+});
+</code></pre>
 <h3 id="success"><a href="#success" class="headerlink" title="success()"></a>success()</h3><p>Process success event</p>
-<pre><code class="javascript">$(<span class="string">'.pin'</span>).easypinShow({
-    data: {<span class="comment">/*json object*/</span>},
-    responsive: <span class="literal">true</span>,
+<pre><code class="javascript">$(&#39;.pin&#39;).easypinShow({
+    data: {/*json object*/},
+    responsive: true,
     variables: {
-        content: <span class="function"><span class="keyword">function</span>(<span class="params">canvas_id, pin_id, data</span>) </span>{
+        content: function(canvas_id, pin_id, data) {
 
-            <span class="comment">// do something...</span>
-            <span class="comment">// and return</span>
-            <span class="keyword">return</span> data;
+            // do something...
+            // and return
+            return data;
         }
     },
     popover: {
-        show: <span class="literal">true</span>,
-        animate: <span class="literal">true</span>
+        show: true,
+        animate: true
     },
-    each: <span class="function"><span class="keyword">function</span>(<span class="params">index, data</span>) </span>{
+    each: function(index, data) {
 
-        <span class="comment">// do something</span>
-        <span class="comment">// and return</span>
-        <span class="keyword">return</span> data;
+        // do something
+        // and return
+        return data;
     },
-    error: <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>{
-        <span class="comment">// do something...</span>
+    error: function(e) {
+        // do something...
     },
-    success: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+    success: function() {
 
     }
-});</code></pre>
+});
+</code></pre>

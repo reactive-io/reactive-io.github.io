@@ -1,26 +1,28 @@
-<h1 id="jQuery-Validation-Plugin-Form-validation-made-easy"><a href="#jQuery-Validation-Plugin-Form-validation-made-easy" class="headerlink" title="jQuery Validation Plugin - Form validation made easy"></a><a href="http://jqueryvalidation.org/" target="_blank" rel="noopener">jQuery Validation Plugin</a> - Form validation made easy</h1><p><a href="http://travis-ci.org/jzaefferer/jquery-validation" target="_blank" rel="noopener"><img src="https://secure.travis-ci.org/jzaefferer/jquery-validation.svg" alt="Build Status"></a><br><a href="https://david-dm.org/jzaefferer/jquery-validation#info=devDependencies" target="_blank" rel="noopener"><img src="https://david-dm.org/jzaefferer/jquery-validation/dev-status.svg?theme=shields.io" alt="devDependency Status"></a><br><a href="https://gitter.im/jzaefferer/jquery-validation" target="_blank" rel="noopener"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/jzaefferer/jquery-validation"></a></p>
+<h1 id="jQuery-Validation-Plugin-Form-validation-made-easy"><a href="#jQuery-Validation-Plugin-Form-validation-made-easy" class="headerlink" title="jQuery Validation Plugin - Form validation made easy"></a><a href="http://jqueryvalidation.org/">jQuery Validation Plugin</a> - Form validation made easy</h1><p><a href="http://travis-ci.org/jzaefferer/jquery-validation"><img src="https://secure.travis-ci.org/jzaefferer/jquery-validation.svg" alt="Build Status"></a><br><a href="https://david-dm.org/jzaefferer/jquery-validation#info=devDependencies"><img src="https://david-dm.org/jzaefferer/jquery-validation/dev-status.svg?theme=shields.io" alt="devDependency Status"></a><br><a href="https://gitter.im/jzaefferer/jquery-validation"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/jzaefferer/jquery-validation"></a></p>
 <p>The jQuery Validation Plugin provides drop-in validation for your existing forms, while making all kinds of customizations to fit your application really easy.</p>
-<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><h3 id="Downloading-the-prebuilt-files"><a href="#Downloading-the-prebuilt-files" class="headerlink" title="Downloading the prebuilt files"></a>Downloading the prebuilt files</h3><p>Prebuilt files can be downloaded from <a href="http://jqueryvalidation.org/" target="_blank" rel="noopener">http://jqueryvalidation.org/</a></p>
+<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><h3 id="Downloading-the-prebuilt-files"><a href="#Downloading-the-prebuilt-files" class="headerlink" title="Downloading the prebuilt files"></a>Downloading the prebuilt files</h3><p>Prebuilt files can be downloaded from <a href="http://jqueryvalidation.org/">http://jqueryvalidation.org/</a></p>
 <h3 id="Downloading-the-latest-changes"><a href="#Downloading-the-latest-changes" class="headerlink" title="Downloading the latest changes"></a>Downloading the latest changes</h3><p>The unreleased development files can be obtained by:</p>
 <ol>
-<li><a href="https://github.com/jzaefferer/jquery-validation/archive/master.zip" target="_blank" rel="noopener">Downloading</a> or Forking this repository</li>
+<li><a href="https://github.com/jzaefferer/jquery-validation/archive/master.zip">Downloading</a> or Forking this repository</li>
 <li><a href="CONTRIBUTING.md#build-setup">Setup the build</a></li>
 <li>Run <code>grunt</code> to create the built files in the “dist” directory</li>
 </ol>
 <h3 id="Including-it-on-your-page"><a href="#Including-it-on-your-page" class="headerlink" title="Including it on your page"></a>Including it on your page</h3><p>Include jQuery and the plugin on a page. Then select a form to validate and call the <code>validate</code> method.</p>
-<pre><code class="html"><span class="tag">&lt;<span class="name">form</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">input</span> <span class="attr">required</span>&gt;</span>
-<span class="tag">&lt;/<span class="name">form</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.validate.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span>&gt;</span>
-<span class="javascript">$(<span class="string">"form"</span>).validate();</span>
-<span class="tag">&lt;/<span class="name">script</span>&gt;</span></code></pre>
+<pre><code class="html">&lt;form&gt;
+    &lt;input required&gt;
+&lt;/form&gt;
+&lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;jquery.validate.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(&quot;form&quot;).validate();
+&lt;/script&gt;
+</code></pre>
 <p>Alternatively include jQuery and the plugin via requirejs in your module.</p>
-<pre><code class="js">define([<span class="string">"jquery"</span>, <span class="string">"jquery.validate"</span>], <span class="function"><span class="keyword">function</span>(<span class="params"> $ </span>) </span>{
-    $(<span class="string">"form"</span>).validate();
-});</code></pre>
-<p>For more information on how to setup a rules and customizations, <a href="http://jqueryvalidation.org/documentation/" target="_blank" rel="noopener">check the documentation</a>.</p>
+<pre><code class="js">define([&quot;jquery&quot;, &quot;jquery.validate&quot;], function( $ ) {
+    $(&quot;form&quot;).validate();
+});
+</code></pre>
+<p>For more information on how to setup a rules and customizations, <a href="http://jqueryvalidation.org/documentation/">check the documentation</a>.</p>
 <h2 id="Reporting-issues-and-contributing-code"><a href="#Reporting-issues-and-contributing-code" class="headerlink" title="Reporting issues and contributing code"></a>Reporting issues and contributing code</h2><p>See the <a href="CONTRIBUTING.md">Contributing Guidelines</a> for details.</p>
-<p><strong>IMPORTANT NOTE ABOUT EMAIL VALIDATION</strong>. As of version 1.12.0 this plugin is using the same regular expression that the <a href="https://html.spec.whatwg.org/multipage/forms.html#valid-e-mail-address" target="_blank" rel="noopener">HTML5 specification suggests for browsers to use</a>. We will follow their lead and use the same check. If you think the specification is wrong, please report the issue to them. If you have different requirements, consider <a href="http://jqueryvalidation.org/jQuery.validator.addMethod/" target="_blank" rel="noopener">using a custom method</a>.<br>In case you need to adjust the built-in validation regular expression patterns, please <a href="http://jqueryvalidation.org/jQuery.validator.methods/" target="_blank" rel="noopener">follow the documentation</a>.</p>
+<p><strong>IMPORTANT NOTE ABOUT EMAIL VALIDATION</strong>. As of version 1.12.0 this plugin is using the same regular expression that the <a href="https://html.spec.whatwg.org/multipage/forms.html#valid-e-mail-address">HTML5 specification suggests for browsers to use</a>. We will follow their lead and use the same check. If you think the specification is wrong, please report the issue to them. If you have different requirements, consider <a href="http://jqueryvalidation.org/jQuery.validator.addMethod/">using a custom method</a>.<br>In case you need to adjust the built-in validation regular expression patterns, please <a href="http://jqueryvalidation.org/jQuery.validator.methods/">follow the documentation</a>.</p>
 <h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>Copyright &copy; Jörn Zaefferer<br><br>Licensed under the MIT license.</p>

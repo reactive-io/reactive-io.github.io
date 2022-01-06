@@ -1,9 +1,11 @@
-<pre><code> ___                              ____       _           _   
-|_ _|_ __ ___   __ _  __ _  ___  / ___|  ___| | ___  ___| |_
- | || &apos;_ ` _ \ / _` |/ _` |/ _ \ \___ \ / _ \ |/ _ \/ __| __|
- | || | | | | | (_| | (_| |  __/  ___) |  __/ |  __/ (__| |_
-|___|_| |_| |_|\__,_|\__, |\___| |____/ \___|_|\___|\___|\__|
-                     |___/  v1.8</code></pre><p><a href="https://raw.githubusercontent.com/websemantics/Image-Select/master/LICENSE" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license"></a> <a href="https://github.com/websemantics/Image-Select/network" target="_blank" rel="noopener"><img src="https://img.shields.io/github/forks/websemantics/Image-Select.svg" alt="GitHub forks"></a> <a href="https://github.com/websemantics/Image-Select/stargazers" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/websemantics/Image-Select.svg" alt="GitHub stars"></a><br><a href="http://isitmaintained.com/project/websemantics/Image-Select" target="_blank" rel="noopener" title="Percentage of issues still open"><img src="http://isitmaintained.com/badge/open/websemantics/Image-Select.svg" alt="Percentage of issues still open"></a></p>
+<pre><code>  ___                              ____       _           _   
+ |_ _|_ __ ___   __ _  __ _  ___  / ___|  ___| | ___  ___| |_
+  | || &#39;_ ` _ \ / _` |/ _` |/ _ \ \___ \ / _ \ |/ _ \/ __| __|
+  | || | | | | | (_| | (_| |  __/  ___) |  __/ |  __/ (__| |_
+ |___|_| |_| |_|\__,_|\__, |\___| |____/ \___|_|\___|\___|\__|
+                      |___/  v1.8
+</code></pre>
+<p><a href="https://raw.githubusercontent.com/websemantics/Image-Select/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license"></a> <a href="https://github.com/websemantics/Image-Select/network"><img src="https://img.shields.io/github/forks/websemantics/Image-Select.svg" alt="GitHub forks"></a> <a href="https://github.com/websemantics/Image-Select/stargazers"><img src="https://img.shields.io/github/stars/websemantics/Image-Select.svg" alt="GitHub stars"></a><br><a href="http://isitmaintained.com/project/websemantics/Image-Select" title="Percentage of issues still open"><img src="http://isitmaintained.com/badge/open/websemantics/Image-Select.svg" alt="Percentage of issues still open"></a></p>
 <blockquote>
 <p>We designed this plugin extension as a humanized UI element for social networking sites that need to facilitate relations between people. Research shows that people are extremely sensitive to photos of others, so we needed to revamp the traditional UI elements to make them more intuitive and human.</p>
 </blockquote>
@@ -12,35 +14,42 @@
 </blockquote>
 <img src="http://websemantics.github.io/Image-Select/img/sample-w540@2x.png" style="width:540px" alt="Image Select"/>
 
-<h4 id="Try-Live-or-Examples"><a href="#Try-Live-or-Examples" class="headerlink" title="Try Live or Examples"></a>Try <a href="http://websemantics.github.io/Image-Select/" target="_blank" rel="noopener">Live</a> or <a href="http://websemantics.github.io/Image-Select/example.html" target="_blank" rel="noopener">Examples</a></h4><h2 id="Use-Scenarios"><a href="#Use-Scenarios" class="headerlink" title="Use Scenarios"></a>Use Scenarios</h2><p>You can use these plugin extensions for modelling multiple (one-to-many) or single (one-to-one) relations between people.</p>
+<h4 id="Try-Live-or-Examples"><a href="#Try-Live-or-Examples" class="headerlink" title="Try Live or Examples"></a>Try <a href="http://websemantics.github.io/Image-Select/">Live</a> or <a href="http://websemantics.github.io/Image-Select/example.html">Examples</a></h4><h2 id="Use-Scenarios"><a href="#Use-Scenarios" class="headerlink" title="Use Scenarios"></a>Use Scenarios</h2><p>You can use these plugin extensions for modelling multiple (one-to-many) or single (one-to-one) relations between people.</p>
 <p>We couldn’t find any scripts that had this full functionality, so we developed it ourselves on top of Chosen. Hope you find it helpful, and get back if you have any feedback/improvements.</p>
 <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><ul>
 <li>Clone locally,</li>
 </ul>
-<pre><code class="bash">git <span class="built_in">clone</span> https://github.com/websemantics/Image-Select</code></pre>
+<pre><code class="bash">git clone https://github.com/websemantics/Image-Select
+</code></pre>
 <ul>
 <li>Install dependencies,</li>
 </ul>
-<pre><code class="bash">bower i</code></pre>
+<pre><code class="bash">bower i
+</code></pre>
 <ul>
 <li>Browse to <code>index.html</code> or <code>example.html</code></li>
 </ul>
 <h3 id="Bower-Package"><a href="#Bower-Package" class="headerlink" title="Bower Package"></a>Bower Package</h3><p>Install in your project,</p>
-<pre><code>bower install image-select --save</code></pre><p>To get information about available packages</p>
-<pre><code class="bash">bower info image-select</code></pre>
+<pre><code>bower install image-select --save
+</code></pre>
+<p>To get information about available packages</p>
+<pre><code class="bash">bower info image-select
+</code></pre>
 <h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>You only need to add a <code>data-img-src</code> attribute to your <code>&lt;option&gt;</code> tag.</p>
-<pre><code class="html"><span class="tag">&lt;<span class="name">select</span> <span class="attr">class</span>=<span class="string">"my-select"</span>&gt;</span>
-  <span class="tag">&lt;<span class="name">option</span> <span class="attr">data-img-src</span>=<span class="string">"img/adnan.png"</span>&gt;</span>Adnan Sagar<span class="tag">&lt;/<span class="name">option</span>&gt;</span>
-  <span class="tag">&lt;<span class="name">option</span> <span class="attr">data-img-src</span>=<span class="string">"img/rena.png"</span>&gt;</span>Rena Cugelman<span class="tag">&lt;/<span class="name">option</span>&gt;</span>
-  <span class="tag">&lt;<span class="name">option</span> <span class="attr">data-img-src</span>=<span class="string">"img/tavis.png"</span>&gt;</span>Tavis Lochhead<span class="tag">&lt;/<span class="name">option</span>&gt;</span>
-  <span class="tag">&lt;<span class="name">option</span> <span class="attr">data-img-src</span>=<span class="string">"img/brian.png"</span> <span class="attr">selected</span>=<span class="string">"selected"</span>&gt;</span>Brain Cugelman<span class="tag">&lt;/<span class="name">option</span>&gt;</span>
-<span class="tag">&lt;/<span class="name">select</span>&gt;</span></code></pre>
+<pre><code class="html">&lt;select class=&quot;my-select&quot;&gt;
+  &lt;option data-img-src=&quot;img/adnan.png&quot;&gt;Adnan Sagar&lt;/option&gt;
+  &lt;option data-img-src=&quot;img/rena.png&quot;&gt;Rena Cugelman&lt;/option&gt;
+  &lt;option data-img-src=&quot;img/tavis.png&quot;&gt;Tavis Lochhead&lt;/option&gt;
+  &lt;option data-img-src=&quot;img/brian.png&quot; selected=&quot;selected&quot;&gt;Brain Cugelman&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
 <p>Then call Chosen as you would with the options you need.</p>
-<pre><code class="javascript">$(<span class="string">".my-select"</span>).chosen();</code></pre>
-<h2 id="Support"><a href="#Support" class="headerlink" title="Support"></a>Support</h2><p>Need help or have a question? post a questions at <a href="https://stackoverflow.com/questions/tagged/image-select" target="_blank" rel="noopener">StackOverflow</a></p>
+<pre><code class="javascript">$(&quot;.my-select&quot;).chosen();
+</code></pre>
+<h2 id="Support"><a href="#Support" class="headerlink" title="Support"></a>Support</h2><p>Need help or have a question? post a questions at <a href="https://stackoverflow.com/questions/tagged/image-select">StackOverflow</a></p>
 <p><em>Please don’t use the issue trackers for support/questions.</em></p>
 <h2 id="Contributions"><a href="#Contributions" class="headerlink" title="Contributions"></a>Contributions</h2><p>We are more than happy to accept external contributions to the project in the form of feedback, bug reports and even better - pull requests :)</p>
-<h1 id="Used-by"><a href="#Used-by" class="headerlink" title="Used by"></a>Used by</h1><p><a href="https://github.com/websemantics/social-field_type" target="_blank" rel="noopener">PyroCMS Social Field Type</a></p>
+<h1 id="Used-by"><a href="#Used-by" class="headerlink" title="Used by"></a>Used by</h1><p><a href="https://github.com/websemantics/social-field_type">PyroCMS Social Field Type</a></p>
 <p><img src="https://raw.githubusercontent.com/websemantics/Image-Select/master/img/social_field_type.gif" alt="demo"></p>
-<h2 id="Open-Source"><a href="#Open-Source" class="headerlink" title="Open Source"></a>Open Source</h2><p>Chosen, <a href="http://github.com/harvesthq/chosen" target="_blank" rel="noopener">http://github.com/harvesthq/chosen</a><br>Bragit, <a href="http://websemantics.github.io/bragit" target="_blank" rel="noopener">http://websemantics.github.io/bragit</a></p>
-<h2 id="Copyright-and-license"><a href="#Copyright-and-license" class="headerlink" title="Copyright and license"></a>Copyright and license</h2><p><a href="http://opensource.org/licenses/mit-license.php" target="_blank" rel="noopener">MIT license</a><br>Copyright (c) Web Semantics, Inc.</p>
+<h2 id="Open-Source"><a href="#Open-Source" class="headerlink" title="Open Source"></a>Open Source</h2><p>Chosen, <a href="http://github.com/harvesthq/chosen">http://github.com/harvesthq/chosen</a><br>Bragit, <a href="http://websemantics.github.io/bragit">http://websemantics.github.io/bragit</a></p>
+<h2 id="Copyright-and-license"><a href="#Copyright-and-license" class="headerlink" title="Copyright and license"></a>Copyright and license</h2><p><a href="http://opensource.org/licenses/mit-license.php">MIT license</a><br>Copyright (c) Web Semantics, Inc.</p>

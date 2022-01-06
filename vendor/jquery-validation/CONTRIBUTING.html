@@ -1,22 +1,22 @@
 <h1 id="Contributing-to-the-jQuery-Validation-Plugin"><a href="#Contributing-to-the-jQuery-Validation-Plugin" class="headerlink" title="Contributing to the jQuery Validation Plugin"></a>Contributing to the jQuery Validation Plugin</h1><h2 id="Reporting-an-Issue"><a href="#Reporting-an-Issue" class="headerlink" title="Reporting an Issue"></a>Reporting an Issue</h2><ol>
 <li>Make sure the problem you’re addressing is reproducible.</li>
-<li>Use <a href="http://jsbin.com" target="_blank" rel="noopener">http://jsbin.com</a> or <a href="http://jsfiddle.net" target="_blank" rel="noopener">http://jsfiddle.net</a> to provide a test page.</li>
+<li>Use <a href="http://jsbin.com/">http://jsbin.com</a> or <a href="http://jsfiddle.net/">http://jsfiddle.net</a> to provide a test page.</li>
 <li>Indicate what browsers the issue can be reproduced in. <strong>Note: IE Compatibilty mode issues will not be addressed. Make sure you test in a real browser!</strong></li>
 <li>What version of the plug-in is the issue reproducible in. Is it reproducible after updating to the latest version.</li>
 </ol>
-<p>Documentation issues are also tracked at the <a href="https://github.com/jzaefferer/jquery-validation/issues" target="_blank" rel="noopener">jQuery Validation</a> issue tracker.<br>Pull Requests to improve the docs are welcome at the <a href="https://github.com/jzaefferer/validation-content" target="_blank" rel="noopener">jQuery Validation docs</a> repository, though.</p>
-<p><strong>IMPORTANT NOTE ABOUT EMAIL VALIDATION</strong>. As of version 1.12.0 this plugin is using the same regular expression that the <a href="https://html.spec.whatwg.org/multipage/forms.html#valid-e-mail-address" target="_blank" rel="noopener">HTML5 specification suggests for browsers to use</a>. We will follow their lead and use the same check. If you think the specification is wrong, please report the issue to them. If you have different requirements, consider <a href="http://jqueryvalidation.org/jQuery.validator.addMethod/" target="_blank" rel="noopener">using a custom method</a>.<br>In case you need to adjust the built-in validation regular expression patterns, please <a href="http://jqueryvalidation.org/jQuery.validator.methods/" target="_blank" rel="noopener">follow the documentation</a>.</p>
+<p>Documentation issues are also tracked at the <a href="https://github.com/jzaefferer/jquery-validation/issues">jQuery Validation</a> issue tracker.<br>Pull Requests to improve the docs are welcome at the <a href="https://github.com/jzaefferer/validation-content">jQuery Validation docs</a> repository, though.</p>
+<p><strong>IMPORTANT NOTE ABOUT EMAIL VALIDATION</strong>. As of version 1.12.0 this plugin is using the same regular expression that the <a href="https://html.spec.whatwg.org/multipage/forms.html#valid-e-mail-address">HTML5 specification suggests for browsers to use</a>. We will follow their lead and use the same check. If you think the specification is wrong, please report the issue to them. If you have different requirements, consider <a href="http://jqueryvalidation.org/jQuery.validator.addMethod/">using a custom method</a>.<br>In case you need to adjust the built-in validation regular expression patterns, please <a href="http://jqueryvalidation.org/jQuery.validator.methods/">follow the documentation</a>.</p>
 <h2 id="Contributing-code"><a href="#Contributing-code" class="headerlink" title="Contributing code"></a>Contributing code</h2><p>Thanks for contributing! Here’s a few guidelines to help your contribution get landed.</p>
 <ol>
 <li>Make sure the problem you’re addressing is reproducible. Use jsbin.com or jsfiddle.net to provide a test page.</li>
-<li>Follow the <a href="http://contribute.jquery.com/style-guides/js" target="_blank" rel="noopener">jQuery style guide</a></li>
+<li>Follow the <a href="http://contribute.jquery.com/style-guides/js">jQuery style guide</a></li>
 <li>Add or update unit tests along with your patch. Run the unit tests in at least one browser (see below).</li>
 <li>Run <code>grunt</code> (see below) to check for linting and a few other issues.</li>
 <li>Describe the change in your commit message and reference the ticket, like this: “Demos: Fixed delegate bug for dynamic-totals demo. Fixes #51”. If you’re adding a new localization file, use something like this: “Localization: Added croatian (HR) localization”</li>
 </ol>
 <h2 id="Build-setup"><a href="#Build-setup" class="headerlink" title="Build setup"></a>Build setup</h2><ol>
-<li>Install <a href="http://nodejs.org" target="_blank" rel="noopener">NodeJS</a>.</li>
-<li>Install the Grunt CLI To install by running <code>npm install -g grunt-cli</code>. More details are available on their website <a href="http://gruntjs.com/getting-started" target="_blank" rel="noopener">http://gruntjs.com/getting-started</a>.</li>
+<li>Install <a href="http://nodejs.org/">NodeJS</a>.</li>
+<li>Install the Grunt CLI To install by running <code>npm install -g grunt-cli</code>. More details are available on their website <a href="http://gruntjs.com/getting-started">http://gruntjs.com/getting-started</a>.</li>
 <li>Install the NPM dependencies by running <code>npm install</code>.</li>
 <li>The build can now be called by running <code>grunt</code>.</li>
 </ol>
@@ -28,5 +28,5 @@
 <li>Send a pull request to the master branch.</li>
 </ol>
 <h2 id="Unit-Tests"><a href="#Unit-Tests" class="headerlink" title="Unit Tests"></a>Unit Tests</h2><p>To run unit tests, just open <code>test/index.html</code> within your browser. Make sure you ran <code>npm install</code> before so all required dependencies are available.<br>Start with one browser while developing the fix, then run against others before committing. Usually latest Chrome, Firefox, Safari and Opera and a few IEs.</p>
-<h2 id="Documentation"><a href="#Documentation" class="headerlink" title="Documentation"></a>Documentation</h2><p>Please report documentation issues at the <a href="https://github.com/jzaefferer/jquery-validation/issues" target="_blank" rel="noopener">jQuery Validation</a> issue tracker.<br>In case your pull request implements or changes public API it would be a plus you would provide a pull request against the <a href="https://github.com/jzaefferer/validation-content" target="_blank" rel="noopener">jQuery Validation docs</a> repository.</p>
+<h2 id="Documentation"><a href="#Documentation" class="headerlink" title="Documentation"></a>Documentation</h2><p>Please report documentation issues at the <a href="https://github.com/jzaefferer/jquery-validation/issues">jQuery Validation</a> issue tracker.<br>In case your pull request implements or changes public API it would be a plus you would provide a pull request against the <a href="https://github.com/jzaefferer/validation-content">jQuery Validation docs</a> repository.</p>
 <h2 id="Linting"><a href="#Linting" class="headerlink" title="Linting"></a>Linting</h2><p>To run JSHint and other tools, use <code>grunt</code>.</p>

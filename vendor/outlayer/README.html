@@ -1,66 +1,76 @@
 <h1 id="Outlayer"><a href="#Outlayer" class="headerlink" title="Outlayer"></a>Outlayer</h1><p><em>Brains and guts of a layout library</em></p>
-<p>Outlayer is a base layout class for layout libraries like <a href="http://isotope.metafizzy.co" target="_blank" rel="noopener">Isotope</a>, <a href="http://packery.metafizzy.co" target="_blank" rel="noopener">Packery</a>, and <a href="http://masonry.desandro.com" target="_blank" rel="noopener">Masonry</a></p>
+<p>Outlayer is a base layout class for layout libraries like <a href="http://isotope.metafizzy.co/">Isotope</a>, <a href="http://packery.metafizzy.co/">Packery</a>, and <a href="http://masonry.desandro.com/">Masonry</a></p>
 <p>Outlayer layouts work with a container element and children item elements.</p>
-<pre><code class="html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"grid"</span>&gt;</span>
-  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+<pre><code class="html">&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
   ...
-<span class="tag">&lt;/<span class="name">div</span>&gt;</span></code></pre>
-<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><p>Install with <a href="http://bower.io" target="_blank" rel="noopener">Bower</a>: <code>bower install outlayer</code></p>
-<p><a href="http://npmjs.org/package/outlayer" target="_blank" rel="noopener">Install with npm</a>: <code>npm install outlayer</code></p>
+&lt;/div&gt;
+</code></pre>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><p>Install with <a href="http://bower.io/">Bower</a>: <code>bower install outlayer</code></p>
+<p><a href="http://npmjs.org/package/outlayer">Install with npm</a>: <code>npm install outlayer</code></p>
 <h2 id="Outlayer-create"><a href="#Outlayer-create" class="headerlink" title="Outlayer.create()"></a>Outlayer.create()</h2><p>Create a layout class with <code>Outlayer.create()</code></p>
-<pre><code class="js"><span class="keyword">var</span> Layout = Outlayer.create( namespace );
-<span class="comment">// for example</span>
-<span class="keyword">var</span> Masonry = Outlayer.create(<span class="string">'masonry'</span>);</code></pre>
+<pre><code class="js">var Layout = Outlayer.create( namespace );
+// for example
+var Masonry = Outlayer.create(&#39;masonry&#39;);
+</code></pre>
 <ul>
 <li><code>namespace</code> <em>{String}</em> should be camelCased</li>
 <li>returns <code>LayoutClass</code> <em>{Function}</em></li>
 </ul>
 <p>Create a new layout class. <code>namespace</code> is used for jQuery plugin, and for declarative initialization.</p>
 <p>The <code>Layout</code> inherits from <a href="docs/outlayer.md"><code>Outlayer.prototype</code></a>.</p>
-<pre><code>var elem = document.querySelector(&apos;.selector&apos;);
+<pre><code>var elem = document.querySelector(&#39;.selector&#39;);
 var msnry = new Masonry( elem, {
   // set options...
   columnWidth: 200
-});</code></pre><h2 id="Item"><a href="#Item" class="headerlink" title="Item"></a>Item</h2><p>Layouts work with Items, accessible as <code>Layout.Item</code>. See <a href="docs/item.md">Item API</a>.</p>
+});
+</code></pre>
+<h2 id="Item"><a href="#Item" class="headerlink" title="Item"></a>Item</h2><p>Layouts work with Items, accessible as <code>Layout.Item</code>. See <a href="docs/item.md">Item API</a>.</p>
 <h2 id="Declarative"><a href="#Declarative" class="headerlink" title="Declarative"></a>Declarative</h2><p>An Outlayer layout class can be initialized via HTML, by setting an attribute of <code>data-namespace</code> on the element. Options are set in JSON. For example:</p>
-<pre><code class="html"><span class="comment">&lt;!-- var Masonry = Outlayer.create('masonry') --&gt;</span>
-<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"grid"</span> <span class="attr">data-masonry</span>=<span class="string">'{ "itemSelector": ".item", "columnWidth": 200 }'</span>&gt;</span>
+<pre><code class="html">&lt;!-- var Masonry = Outlayer.create(&#39;masonry&#39;) --&gt;
+&lt;div class=&quot;grid&quot; data-masonry=&#39;{ &quot;itemSelector&quot;: &quot;.item&quot;, &quot;columnWidth&quot;: 200 }&#39;&gt;
   ...
-<span class="tag">&lt;/<span class="name">div</span>&gt;</span></code></pre>
+&lt;/div&gt;
+</code></pre>
 <p>The declarative attributes and class will be dashed. i.e. <code>Outlayer.create(&#39;myNiceLayout&#39;)</code> will use <code>data-my-nice-layout</code> as the attribute.</p>
 <h2 id="data"><a href="#data" class="headerlink" title=".data()"></a>.data()</h2><p>Get a layout instance from an element.</p>
-<pre><code>var myMasonry = Masonry.data( document.querySelector(&apos;.grid&apos;) );</code></pre><h2 id="jQuery-plugin"><a href="#jQuery-plugin" class="headerlink" title="jQuery plugin"></a>jQuery plugin</h2><p>The layout class also works as jQuery plugin.</p>
-<pre><code class="js"><span class="comment">// create Masonry layout class, namespace will be the jQuery method</span>
-<span class="keyword">var</span> Masonry = Outlayer.create(<span class="string">'masonry'</span>);
-<span class="comment">// rock some jQuery</span>
-$( <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-  <span class="comment">// .masonry() to initialize</span>
-  <span class="keyword">var</span> $grid = $(<span class="string">'.grid'</span>).masonry({
-    <span class="comment">// options...</span>
+<pre><code>var myMasonry = Masonry.data( document.querySelector(&#39;.grid&#39;) );
+</code></pre>
+<h2 id="jQuery-plugin"><a href="#jQuery-plugin" class="headerlink" title="jQuery plugin"></a>jQuery plugin</h2><p>The layout class also works as jQuery plugin.</p>
+<pre><code class="js">// create Masonry layout class, namespace will be the jQuery method
+var Masonry = Outlayer.create(&#39;masonry&#39;);
+// rock some jQuery
+$( function() {
+  // .masonry() to initialize
+  var $grid = $(&#39;.grid&#39;).masonry({
+    // options...
   });
-  <span class="comment">// methods are available by passing a string as first parameter</span>
-  $grid.masonry( <span class="string">'reveal'</span>, elems );
-});</code></pre>
-<h2 id="RequireJS"><a href="#RequireJS" class="headerlink" title="RequireJS"></a>RequireJS</h2><p>To use Outlayer with <a href="http://requirejs.org/" target="_blank" rel="noopener">RequireJS</a>, you’ll need to set some config.</p>
-<p>Set <a href="http://requirejs.org/docs/api.html#config-baseUrl" target="_blank" rel="noopener">baseUrl</a> to bower_components and set a <a href="http://requirejs.org/docs/api.html#config-paths" target="_blank" rel="noopener">path config</a> for all your application code.</p>
+  // methods are available by passing a string as first parameter
+  $grid.masonry( &#39;reveal&#39;, elems );
+});
+</code></pre>
+<h2 id="RequireJS"><a href="#RequireJS" class="headerlink" title="RequireJS"></a>RequireJS</h2><p>To use Outlayer with <a href="http://requirejs.org/">RequireJS</a>, you’ll need to set some config.</p>
+<p>Set <a href="http://requirejs.org/docs/api.html#config-baseUrl">baseUrl</a> to bower_components and set a <a href="http://requirejs.org/docs/api.html#config-paths">path config</a> for all your application code.</p>
 <pre><code class="js">requirejs.config({
-  baseUrl: <span class="string">'bower_components'</span>,
+  baseUrl: &#39;bower_components&#39;,
   paths: {
-    app: <span class="string">'../'</span>
+    app: &#39;../&#39;
   }
 });
 
-requirejs( [ <span class="string">'outlayer/outlayer'</span>, <span class="string">'app/my-component.js'</span> ], <span class="function"><span class="keyword">function</span>(<span class="params"> Outlayer, myComp </span>) </span>{
-  <span class="keyword">new</span> Outlayer( <span class="comment">/*...*/</span> )
-});</code></pre>
+requirejs( [ &#39;outlayer/outlayer&#39;, &#39;app/my-component.js&#39; ], function( Outlayer, myComp ) {
+  new Outlayer( /*...*/ )
+});
+</code></pre>
 <p>Or set a path config for all Outlayer dependencies.</p>
 <pre><code class="js">requirejs.config({
   paths: {
-    <span class="string">'ev-emitter'</span>: <span class="string">'bower_components/ev-emitter'</span>,
-    <span class="string">'get-size'</span>: <span class="string">'bower_components/get-size'</span>,
-    <span class="string">'matches-selector'</span>: <span class="string">'bower_components/matches-selector'</span>
+    &#39;ev-emitter&#39;: &#39;bower_components/ev-emitter&#39;,
+    &#39;get-size&#39;: &#39;bower_components/get-size&#39;,
+    &#39;matches-selector&#39;: &#39;bower_components/matches-selector&#39;
   }
-});</code></pre>
-<h2 id="MIT-license"><a href="#MIT-license" class="headerlink" title="MIT license"></a>MIT license</h2><p>Outlayer is released under the <a href="http://desandro.mit-license.org" target="_blank" rel="noopener">MIT license</a>.</p>
+});
+</code></pre>
+<h2 id="MIT-license"><a href="#MIT-license" class="headerlink" title="MIT license"></a>MIT license</h2><p>Outlayer is released under the <a href="http://desandro.mit-license.org/">MIT license</a>.</p>

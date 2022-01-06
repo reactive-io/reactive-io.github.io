@@ -13,7 +13,7 @@
 </li>
 <li><p><strong>Check if the issue has been fixed</strong> &mdash; try to reproduce it using the<br><code>master</code> branch in the repository.</p>
 </li>
-<li><p><strong>Isolate and report the problem</strong> &mdash; ideally create a reduced test<br>case or a small <a href="http://jsfiddle.net" target="_blank" rel="noopener">jsfiddle</a> showing the issue.</p>
+<li><p><strong>Isolate and report the problem</strong> &mdash; ideally create a reduced test<br>case or a small <a href="http://jsfiddle.net/">jsfiddle</a> showing the issue.</p>
 </li>
 </ol>
 <p>Please try to be as detailed as possible in your report. Include information about<br>your operating system, browser, jQuery version, and masked input plugin version.<br>Please provide steps to reproduce the issue as well as the outcome you were expecting.</p>
@@ -24,38 +24,44 @@
 <p>If you have any large pull request in mind (e.g. implementing features,<br>refactoring code, etc), <strong>please ask first</strong> otherwise you risk spending<br>a lot of time working on something that the project’s developers might<br>not want to merge into the project.</p>
 <p>Please adhere to the coding conventions in the project (indentation,<br>accurate comments, etc.) and don’t forget to add your own tests and<br>documentation. When working with git, we recommend the following process<br>in order to craft an excellent pull request:</p>
 <ol>
-<li><p><a href="http://help.github.com/fork-a-repo/" target="_blank" rel="noopener">Fork</a> the project, clone your fork,<br>and configure the remotes:</p>
-<pre><code class="bash"><span class="comment"># Clone your fork of the repo into the current directory</span>
-git <span class="built_in">clone</span> https://github.com/&lt;your-username&gt;/jquery.maskedinput
-<span class="comment"># Navigate to the newly cloned directory</span>
-<span class="built_in">cd</span> jquery.maskedinput
-<span class="comment"># Assign the original repo to a remote called "upstream"</span>
-git remote add upstream https://github.com/digitalBush/jquery.maskedinput</code></pre>
+<li><p><a href="http://help.github.com/fork-a-repo/">Fork</a> the project, clone your fork,<br>and configure the remotes:</p>
+<pre><code class="bash"># Clone your fork of the repo into the current directory
+git clone https://github.com/&lt;your-username&gt;/jquery.maskedinput
+# Navigate to the newly cloned directory
+cd jquery.maskedinput
+# Assign the original repo to a remote called &quot;upstream&quot;
+git remote add upstream https://github.com/digitalBush/jquery.maskedinput
+</code></pre>
 </li>
 <li><p>If you cloned a while ago, get the latest changes from upstream:</p>
 <pre><code class="bash">git checkout master
-git pull upstream master</code></pre>
+git pull upstream master
+</code></pre>
 </li>
 <li><p>Create a new topic branch (off of <code>master</code>) to contain your feature, change,<br>or fix.</p>
 <p><strong>IMPORTANT</strong>: Making changes in <code>master</code> is discouraged. You should always<br>keep your local <code>master</code> in sync with upstream <code>master</code> and make your<br>changes in topic branches.</p>
-<pre><code class="bash">git checkout -b &lt;topic-branch-name&gt;</code></pre>
+<pre><code class="bash">git checkout -b &lt;topic-branch-name&gt;
+</code></pre>
 </li>
 <li><p>Commit your changes in logical chunks. Keep your commit messages organized,<br>with a short description in the first line and more detailed information on<br>the following lines.</p>
-<p>Please use git’s<br><a href="https://help.github.com/articles/interactive-rebase" target="_blank" rel="noopener">interactive rebase</a><br>feature to tidy up your commits before making them public. Ideally when you<br>are finished you’ll have a single commit.</p>
+<p>Please use git’s<br><a href="https://help.github.com/articles/interactive-rebase">interactive rebase</a><br>feature to tidy up your commits before making them public. Ideally when you<br>are finished you’ll have a single commit.</p>
 </li>
 <li><p>Make sure all the tests are still passing.</p>
-<pre><code class="bash">npm <span class="built_in">test</span></code></pre>
+<pre><code class="bash">npm test
+</code></pre>
 </li>
 <li><p>Push your topic branch up to your fork:</p>
-<pre><code class="bash">git push origin &lt;topic-branch-name&gt;</code></pre>
+<pre><code class="bash">git push origin &lt;topic-branch-name&gt;
+</code></pre>
 </li>
-<li><p><a href="https://help.github.com/articles/using-pull-requests/" target="_blank" rel="noopener">Open a Pull Request</a><br> with a clear title and description.</p>
+<li><p><a href="https://help.github.com/articles/using-pull-requests/">Open a Pull Request</a><br> with a clear title and description.</p>
 </li>
 <li><p>If you haven’t updated your pull request for a while, you should consider<br>rebasing on master and resolving any conflicts.</p>
 <p><strong>IMPORTANT</strong>: <em>Never ever</em> merge upstream <code>master</code> into your branches. You<br>should always <code>git rebase</code> on <code>master</code> to bring your changes up to date when<br>necessary.</p>
 <pre><code class="bash">git checkout master
 git pull upstream master
 git checkout &lt;your-topic-branch&gt;
-git rebase master</code></pre>
+git rebase master
+</code></pre>
 </li>
 </ol>

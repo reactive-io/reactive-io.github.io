@@ -1,133 +1,145 @@
 <h1 id="imagesLoaded"><a href="#imagesLoaded" class="headerlink" title="imagesLoaded"></a>imagesLoaded</h1><p class="tagline">JavaScript is all like "You images done yet or what?"</p>
 
-<p><a href="http://imagesloaded.desandro.com" target="_blank" rel="noopener">imagesloaded.desandro.com</a></p>
+<p><a href="http://imagesloaded.desandro.com/">imagesloaded.desandro.com</a></p>
 <p>Detect when images have been loaded.</p>
 <h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><h3 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h3><ul>
-<li><a href="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js" target="_blank" rel="noopener">imagesloaded.pkgd.min.js</a> minified</li>
-<li><a href="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js" target="_blank" rel="noopener">imagesloaded.pkgd.js</a> un-minified</li>
+<li><a href="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js">imagesloaded.pkgd.min.js</a> minified</li>
+<li><a href="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js">imagesloaded.pkgd.js</a> un-minified</li>
 </ul>
-<h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><pre><code class="html"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
-<span class="comment">&lt;!-- or --&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></code></pre>
-<h3 id="Package-managers"><a href="#Package-managers" class="headerlink" title="Package managers"></a>Package managers</h3><p>Install via <a href="https://www.npmjs.com/package/imagesloaded" target="_blank" rel="noopener">npm</a>: <code>npm install imagesloaded</code></p>
-<p>Install via <a href="http://bower.io" target="_blank" rel="noopener">Bower</a>: <code>bower install imagesloaded --save</code></p>
+<h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><pre><code class="html">&lt;script src=&quot;https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- or --&gt;
+&lt;script src=&quot;https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h3 id="Package-managers"><a href="#Package-managers" class="headerlink" title="Package managers"></a>Package managers</h3><p>Install via <a href="https://www.npmjs.com/package/imagesloaded">npm</a>: <code>npm install imagesloaded</code></p>
+<p>Install via <a href="http://bower.io/">Bower</a>: <code>bower install imagesloaded --save</code></p>
 <h2 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h2><p>You can use imagesLoaded as a jQuery Plugin.</p>
-<pre><code class="js">$(<span class="string">'#container'</span>).imagesLoaded( <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-  <span class="comment">// images have loaded</span>
+<pre><code class="js">$(&#39;#container&#39;).imagesLoaded( function() {
+  // images have loaded
 });
 
-<span class="comment">// options</span>
-$(<span class="string">'#container'</span>).imagesLoaded( {
-  <span class="comment">// options...</span>
+// options
+$(&#39;#container&#39;).imagesLoaded( {
+  // options...
   },
-  <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-    <span class="comment">// images have loaded</span>
+  function() {
+    // images have loaded
   }
-);</code></pre>
-<p><code>.imagesLoaded()</code> returns a <a href="http://api.jquery.com/category/deferred-object/" target="_blank" rel="noopener">jQuery Deferred object</a>. This allows you to use <code>.always()</code>, <code>.done()</code>, <code>.fail()</code> and <code>.progress()</code>.</p>
-<pre><code class="js">$(<span class="string">'#container'</span>).imagesLoaded()
-  .always( <span class="function"><span class="keyword">function</span>(<span class="params"> instance </span>) </span>{
-    <span class="built_in">console</span>.log(<span class="string">'all images loaded'</span>);
+);
+</code></pre>
+<p><code>.imagesLoaded()</code> returns a <a href="http://api.jquery.com/category/deferred-object/">jQuery Deferred object</a>. This allows you to use <code>.always()</code>, <code>.done()</code>, <code>.fail()</code> and <code>.progress()</code>.</p>
+<pre><code class="js">$(&#39;#container&#39;).imagesLoaded()
+  .always( function( instance ) {
+    console.log(&#39;all images loaded&#39;);
   })
-  .done( <span class="function"><span class="keyword">function</span>(<span class="params"> instance </span>) </span>{
-    <span class="built_in">console</span>.log(<span class="string">'all images successfully loaded'</span>);
+  .done( function( instance ) {
+    console.log(&#39;all images successfully loaded&#39;);
   })
-  .fail( <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-    <span class="built_in">console</span>.log(<span class="string">'all images loaded, at least one is broken'</span>);
+  .fail( function() {
+    console.log(&#39;all images loaded, at least one is broken&#39;);
   })
-  .progress( <span class="function"><span class="keyword">function</span>(<span class="params"> instance, image </span>) </span>{
-    <span class="keyword">var</span> result = image.isLoaded ? <span class="string">'loaded'</span> : <span class="string">'broken'</span>;
-    <span class="built_in">console</span>.log( <span class="string">'image is '</span> + result + <span class="string">' for '</span> + image.img.src );
-  });</code></pre>
+  .progress( function( instance, image ) {
+    var result = image.isLoaded ? &#39;loaded&#39; : &#39;broken&#39;;
+    console.log( &#39;image is &#39; + result + &#39; for &#39; + image.img.src );
+  });
+</code></pre>
 <h2 id="Vanilla-JavaScript"><a href="#Vanilla-JavaScript" class="headerlink" title="Vanilla JavaScript"></a>Vanilla JavaScript</h2><p>You can use imagesLoaded with vanilla JS.</p>
 <pre><code class="js">imagesLoaded( elem, callback )
-<span class="comment">// options</span>
+// options
 imagesLoaded( elem, options, callback )
-<span class="comment">// you can use `new` if you like</span>
-<span class="keyword">new</span> imagesLoaded( elem, callback )</code></pre>
+// you can use `new` if you like
+new imagesLoaded( elem, callback )
+</code></pre>
 <ul>
 <li><code>elem</code> <em>Element, NodeList, Array, or Selector String</em></li>
 <li><code>options</code> <em>Object</em></li>
 <li><code>callback</code> <em>Function</em> - function triggered after all images have been loaded</li>
 </ul>
 <p>Using a callback function is the same as binding it to the <code>always</code> event (see below).</p>
-<pre><code class="js"><span class="comment">// element</span>
-imagesLoaded( <span class="built_in">document</span>.querySelector(<span class="string">'#container'</span>), <span class="function"><span class="keyword">function</span>(<span class="params"> instance </span>) </span>{
-  <span class="built_in">console</span>.log(<span class="string">'all images are loaded'</span>);
+<pre><code class="js">// element
+imagesLoaded( document.querySelector(&#39;#container&#39;), function( instance ) {
+  console.log(&#39;all images are loaded&#39;);
 });
-<span class="comment">// selector string</span>
-imagesLoaded( <span class="string">'#container'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{...});
-<span class="comment">// multiple elements</span>
-<span class="keyword">var</span> posts = <span class="built_in">document</span>.querySelectorAll(<span class="string">'.post'</span>);
-imagesLoaded( posts, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{...});</code></pre>
+// selector string
+imagesLoaded( &#39;#container&#39;, function() {...});
+// multiple elements
+var posts = document.querySelectorAll(&#39;.post&#39;);
+imagesLoaded( posts, function() {...});
+</code></pre>
 <p>Bind events with vanilla JS with .on(), .off(), and .once() methods.</p>
-<pre><code class="js"><span class="keyword">var</span> imgLoad = imagesLoaded( elem );
-<span class="function"><span class="keyword">function</span> <span class="title">onAlways</span>(<span class="params"> instance </span>) </span>{
-  <span class="built_in">console</span>.log(<span class="string">'all images are loaded'</span>);
+<pre><code class="js">var imgLoad = imagesLoaded( elem );
+function onAlways( instance ) {
+  console.log(&#39;all images are loaded&#39;);
 }
-<span class="comment">// bind with .on()</span>
-imgLoad.on( <span class="string">'always'</span>, onAlways );
-<span class="comment">// unbind with .off()</span>
-imgLoad.off( <span class="string">'always'</span>, onAlways );</code></pre>
+// bind with .on()
+imgLoad.on( &#39;always&#39;, onAlways );
+// unbind with .off()
+imgLoad.off( &#39;always&#39;, onAlways );
+</code></pre>
 <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>Detect when background images have loaded, in addition to <code>&lt;img&gt;</code>s.</p>
 <p>Set <code>{ background: true }</code> to detect when the element’s background image has loaded.</p>
-<pre><code class="js"><span class="comment">// jQuery</span>
-$(<span class="string">'#container'</span>).imagesLoaded( { <span class="attr">background</span>: <span class="literal">true</span> }, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-  <span class="built_in">console</span>.log(<span class="string">'#container background image loaded'</span>);
+<pre><code class="js">// jQuery
+$(&#39;#container&#39;).imagesLoaded( { background: true }, function() {
+  console.log(&#39;#container background image loaded&#39;);
 });
 
-<span class="comment">// vanilla JS</span>
-imagesLoaded( <span class="string">'#container'</span>, { <span class="attr">background</span>: <span class="literal">true</span> }, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-  <span class="built_in">console</span>.log(<span class="string">'#container background image loaded'</span>);
-});</code></pre>
-<p><a href="http://codepen.io/desandro/pen/pjVMPB" target="_blank" rel="noopener">See jQuery demo</a> or <a href="http://codepen.io/desandro/pen/avKooW" target="_blank" rel="noopener">vanilla JS demo</a> on CodePen.</p>
+// vanilla JS
+imagesLoaded( &#39;#container&#39;, { background: true }, function() {
+  console.log(&#39;#container background image loaded&#39;);
+});
+</code></pre>
+<p><a href="http://codepen.io/desandro/pen/pjVMPB">See jQuery demo</a> or <a href="http://codepen.io/desandro/pen/avKooW">vanilla JS demo</a> on CodePen.</p>
 <p>Set to a selector string like <code>{ background: &#39;.item&#39; }</code> to detect when the background images of child elements have loaded.</p>
-<pre><code class="js"><span class="comment">// jQuery</span>
-$(<span class="string">'#container'</span>).imagesLoaded( { <span class="attr">background</span>: <span class="string">'.item'</span> }, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-  <span class="built_in">console</span>.log(<span class="string">'all .item background images loaded'</span>);
+<pre><code class="js">// jQuery
+$(&#39;#container&#39;).imagesLoaded( { background: &#39;.item&#39; }, function() {
+  console.log(&#39;all .item background images loaded&#39;);
 });
 
-<span class="comment">// vanilla JS</span>
-imagesLoaded( <span class="string">'#container'</span>, { <span class="attr">background</span>: <span class="string">'.item'</span> }, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-  <span class="built_in">console</span>.log(<span class="string">'all .item background images loaded'</span>);
-});</code></pre>
-<p><a href="http://codepen.io/desandro/pen/avKoZL" target="_blank" rel="noopener">See jQuery demo</a> or <a href="http://codepen.io/desandro/pen/vNrBGz" target="_blank" rel="noopener">vanilla JS demo</a> on CodePen.</p>
-<h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><h3 id="always"><a href="#always" class="headerlink" title="always"></a>always</h3><pre><code class="js"><span class="comment">// jQuery</span>
-$(<span class="string">'#container'</span>).imagesLoaded().always( <span class="function"><span class="keyword">function</span>(<span class="params"> instance </span>) </span>{
-  <span class="built_in">console</span>.log(<span class="string">'ALWAYS - all images have been loaded'</span>);
+// vanilla JS
+imagesLoaded( &#39;#container&#39;, { background: &#39;.item&#39; }, function() {
+  console.log(&#39;all .item background images loaded&#39;);
+});
+</code></pre>
+<p><a href="http://codepen.io/desandro/pen/avKoZL">See jQuery demo</a> or <a href="http://codepen.io/desandro/pen/vNrBGz">vanilla JS demo</a> on CodePen.</p>
+<h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><h3 id="always"><a href="#always" class="headerlink" title="always"></a>always</h3><pre><code class="js">// jQuery
+$(&#39;#container&#39;).imagesLoaded().always( function( instance ) {
+  console.log(&#39;ALWAYS - all images have been loaded&#39;);
 });
 
-<span class="comment">// vanilla JS</span>
-imgLoad.on( <span class="string">'always'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> instance </span>) </span>{
-  <span class="built_in">console</span>.log(<span class="string">'ALWAYS - all images have been loaded'</span>);
-});</code></pre>
+// vanilla JS
+imgLoad.on( &#39;always&#39;, function( instance ) {
+  console.log(&#39;ALWAYS - all images have been loaded&#39;);
+});
+</code></pre>
 <p>Triggered after all images have been either loaded or confirmed broken.</p>
 <ul>
 <li><code>instance</code> <em>imagesLoaded</em> - the imagesLoaded instance</li>
 </ul>
-<h3 id="done"><a href="#done" class="headerlink" title="done"></a>done</h3><pre><code class="js"><span class="comment">// jQuery</span>
-$(<span class="string">'#container'</span>).imagesLoaded().done( <span class="function"><span class="keyword">function</span>(<span class="params"> instance </span>) </span>{
-  <span class="built_in">console</span>.log(<span class="string">'DONE  - all images have been successfully loaded'</span>);
+<h3 id="done"><a href="#done" class="headerlink" title="done"></a>done</h3><pre><code class="js">// jQuery
+$(&#39;#container&#39;).imagesLoaded().done( function( instance ) {
+  console.log(&#39;DONE  - all images have been successfully loaded&#39;);
 });
 
-<span class="comment">// vanilla JS</span>
-imgLoad.on( <span class="string">'done'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> instance </span>) </span>{
-  <span class="built_in">console</span>.log(<span class="string">'DONE  - all images have been successfully loaded'</span>);
-});</code></pre>
+// vanilla JS
+imgLoad.on( &#39;done&#39;, function( instance ) {
+  console.log(&#39;DONE  - all images have been successfully loaded&#39;);
+});
+</code></pre>
 <p>Triggered after all images have successfully loaded without any broken images.</p>
-<h3 id="fail"><a href="#fail" class="headerlink" title="fail"></a>fail</h3><pre><code class="js">$(<span class="string">'#container'</span>).imagesLoaded().fail( <span class="function"><span class="keyword">function</span>(<span class="params"> instance </span>) </span>{
-  <span class="built_in">console</span>.log(<span class="string">'FAIL - all images loaded, at least one is broken'</span>);
+<h3 id="fail"><a href="#fail" class="headerlink" title="fail"></a>fail</h3><pre><code class="js">$(&#39;#container&#39;).imagesLoaded().fail( function( instance ) {
+  console.log(&#39;FAIL - all images loaded, at least one is broken&#39;);
 });
 
-<span class="comment">// vanilla JS</span>
-imgLoad.on( <span class="string">'fail'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> instance </span>) </span>{
-  <span class="built_in">console</span>.log(<span class="string">'FAIL - all images loaded, at least one is broken'</span>);
-});</code></pre>
+// vanilla JS
+imgLoad.on( &#39;fail&#39;, function( instance ) {
+  console.log(&#39;FAIL - all images loaded, at least one is broken&#39;);
+});
+</code></pre>
 <p>Triggered after all images have been loaded with at least one broken image.</p>
-<h3 id="progress"><a href="#progress" class="headerlink" title="progress"></a>progress</h3><pre><code class="js">imgLoad.on( <span class="string">'progress'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> instance, image </span>) </span>{
-  <span class="keyword">var</span> result = image.isLoaded ? <span class="string">'loaded'</span> : <span class="string">'broken'</span>;
-  <span class="built_in">console</span>.log( <span class="string">'image is '</span> + result + <span class="string">' for '</span> + image.img.src );
-});</code></pre>
+<h3 id="progress"><a href="#progress" class="headerlink" title="progress"></a>progress</h3><pre><code class="js">imgLoad.on( &#39;progress&#39;, function( instance, image ) {
+  var result = image.isLoaded ? &#39;loaded&#39; : &#39;broken&#39;;
+  console.log( &#39;image is &#39; + result + &#39; for &#39; + image.img.src );
+});
+</code></pre>
 <p>Triggered after each image has been loaded.</p>
 <ul>
 <li><code>instance</code> <em>imagesLoaded</em> - the imagesLoaded instance</li>
@@ -138,85 +150,96 @@ imgLoad.on( <span class="string">'fail'</span>, <span class="function"><span cla
 <h2 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h2><h3 id="LoadingImage-img"><a href="#LoadingImage-img" class="headerlink" title="LoadingImage.img"></a>LoadingImage.img</h3><p><em>Image</em> - The <code>img</code> element</p>
 <h3 id="LoadingImage-isLoaded"><a href="#LoadingImage-isLoaded" class="headerlink" title="LoadingImage.isLoaded"></a>LoadingImage.isLoaded</h3><p><em>Boolean</em> - <code>true</code> when the image has successfully loaded</p>
 <h3 id="imagesLoaded-images"><a href="#imagesLoaded-images" class="headerlink" title="imagesLoaded.images"></a>imagesLoaded.images</h3><p>Array of <em>LoadingImage</em> instances for each image detected</p>
-<pre><code class="js"><span class="keyword">var</span> imgLoad = imagesLoaded(<span class="string">'#container'</span>);
-imgLoad.on( <span class="string">'always'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-  <span class="built_in">console</span>.log( imgLoad.images.length + <span class="string">' images loaded'</span> );
-  <span class="comment">// detect which image is broken</span>
-  <span class="keyword">for</span> ( <span class="keyword">var</span> i = <span class="number">0</span>, len = imgLoad.images.length; i &lt; len; i++ ) {
-    <span class="keyword">var</span> image = imgLoad.images[i];
-    <span class="keyword">var</span> result = image.isLoaded ? <span class="string">'loaded'</span> : <span class="string">'broken'</span>;
-    <span class="built_in">console</span>.log( <span class="string">'image is '</span> + result + <span class="string">' for '</span> + image.img.src );
+<pre><code class="js">var imgLoad = imagesLoaded(&#39;#container&#39;);
+imgLoad.on( &#39;always&#39;, function() {
+  console.log( imgLoad.images.length + &#39; images loaded&#39; );
+  // detect which image is broken
+  for ( var i = 0, len = imgLoad.images.length; i &lt; len; i++ ) {
+    var image = imgLoad.images[i];
+    var result = image.isLoaded ? &#39;loaded&#39; : &#39;broken&#39;;
+    console.log( &#39;image is &#39; + result + &#39; for &#39; + image.img.src );
   }
-});</code></pre>
-<h2 id="Browserify"><a href="#Browserify" class="headerlink" title="Browserify"></a>Browserify</h2><p>imagesLoaded works with <a href="http://browserify.org/" target="_blank" rel="noopener">Browserify</a>.</p>
-<pre><code class="bash">npm install imagesloaded --save</code></pre>
-<pre><code class="js"><span class="keyword">var</span> imagesLoaded = <span class="built_in">require</span>(<span class="string">'imagesloaded'</span>);
+});
+</code></pre>
+<h2 id="Browserify"><a href="#Browserify" class="headerlink" title="Browserify"></a>Browserify</h2><p>imagesLoaded works with <a href="http://browserify.org/">Browserify</a>.</p>
+<pre><code class="bash">npm install imagesloaded --save
+</code></pre>
+<pre><code class="js">var imagesLoaded = require(&#39;imagesloaded&#39;);
 
-imagesLoaded( elem, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{...} );</code></pre>
+imagesLoaded( elem, function() {...} );
+</code></pre>
 <p>Use <code>.makeJQueryPlugin</code> to make to use <code>.imagesLoaded()</code> jQuery plugin.</p>
-<pre><code class="js"><span class="keyword">var</span> $ = <span class="built_in">require</span>(<span class="string">'jquery'</span>);
-<span class="keyword">var</span> imagesLoaded = <span class="built_in">require</span>(<span class="string">'imagesloaded'</span>);
+<pre><code class="js">var $ = require(&#39;jquery&#39;);
+var imagesLoaded = require(&#39;imagesloaded&#39;);
 
-<span class="comment">// provide jQuery argument</span>
+// provide jQuery argument
 imagesLoaded.makeJQueryPlugin( $ );
-<span class="comment">// now use .imagesLoaded() jQuery plugin</span>
-$(<span class="string">'#container'</span>).imagesLoaded( <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{...});</code></pre>
+// now use .imagesLoaded() jQuery plugin
+$(&#39;#container&#39;).imagesLoaded( function() {...});
+</code></pre>
 <h2 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h2><p>Install imagesLoaded with npm.</p>
-<pre><code class="bash">npm install imagesloaded</code></pre>
+<pre><code class="bash">npm install imagesloaded
+</code></pre>
 <p>You can then <code>require(&#39;imagesloaded&#39;)</code>.</p>
-<pre><code class="js"><span class="comment">// main.js</span>
-<span class="keyword">var</span> imagesLoaded = <span class="built_in">require</span>(<span class="string">'imagesloaded'</span>);
+<pre><code class="js">// main.js
+var imagesLoaded = require(&#39;imagesloaded&#39;);
 
-imagesLoaded( <span class="string">'#container'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-  <span class="comment">// images have loaded</span>
-});</code></pre>
+imagesLoaded( &#39;#container&#39;, function() {
+  // images have loaded
+});
+</code></pre>
 <p>Use <code>.makeJQueryPlugin</code> to make <code>.imagesLoaded()</code> jQuery plugin.</p>
-<pre><code class="js"><span class="comment">// main.js</span>
-<span class="keyword">var</span> imagesLoaded = <span class="built_in">require</span>(<span class="string">'imagesloaded'</span>);
-<span class="keyword">var</span> $ = <span class="built_in">require</span>(<span class="string">'jquery'</span>);
+<pre><code class="js">// main.js
+var imagesLoaded = require(&#39;imagesloaded&#39;);
+var $ = require(&#39;jquery&#39;);
 
-<span class="comment">// provide jQuery argument</span>
+// provide jQuery argument
 imagesLoaded.makeJQueryPlugin( $ );
-<span class="comment">// now use .imagesLoaded() jQuery plugin</span>
-$(<span class="string">'#container'</span>).imagesLoaded( <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{...});</code></pre>
+// now use .imagesLoaded() jQuery plugin
+$(&#39;#container&#39;).imagesLoaded( function() {...});
+</code></pre>
 <p>Run webpack.</p>
-<pre><code class="bash">webpack main.js bundle.js</code></pre>
-<h2 id="RequireJS"><a href="#RequireJS" class="headerlink" title="RequireJS"></a>RequireJS</h2><p>imagesLoaded works with <a href="http://requirejs.org" target="_blank" rel="noopener">RequireJS</a>.</p>
-<p>You can require <a href="http://imagesloaded.desandro.com/imagesloaded.pkgd.js" target="_blank" rel="noopener">imagesloaded.pkgd.js</a>.</p>
+<pre><code class="bash">webpack main.js bundle.js
+</code></pre>
+<h2 id="RequireJS"><a href="#RequireJS" class="headerlink" title="RequireJS"></a>RequireJS</h2><p>imagesLoaded works with <a href="http://requirejs.org/">RequireJS</a>.</p>
+<p>You can require <a href="http://imagesloaded.desandro.com/imagesloaded.pkgd.js">imagesloaded.pkgd.js</a>.</p>
 <pre><code class="js">requirejs( [
-  <span class="string">'path/to/imagesloaded.pkgd.js'</span>,
-], <span class="function"><span class="keyword">function</span>(<span class="params"> imagesLoaded </span>) </span>{
-  imagesLoaded( <span class="string">'#container'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{ ... });
-});</code></pre>
+  &#39;path/to/imagesloaded.pkgd.js&#39;,
+], function( imagesLoaded ) {
+  imagesLoaded( &#39;#container&#39;, function() { ... });
+});
+</code></pre>
 <p>Use <code>.makeJQueryPlugin</code> to make <code>.imagesLoaded()</code> jQuery plugin.</p>
 <pre><code class="js">requirejs( [
-  <span class="string">'jquery'</span>,
-  <span class="string">'path/to/imagesloaded.pkgd.js'</span>,
-], <span class="function"><span class="keyword">function</span>(<span class="params"> $, imagesLoaded </span>) </span>{
-  <span class="comment">// provide jQuery argument</span>
+  &#39;jquery&#39;,
+  &#39;path/to/imagesloaded.pkgd.js&#39;,
+], function( $, imagesLoaded ) {
+  // provide jQuery argument
   imagesLoaded.makeJQueryPlugin( $ );
-  <span class="comment">// now use .imagesLoaded() jQuery plugin</span>
-  $(<span class="string">'#container'</span>).imagesLoaded( <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{...});
-});</code></pre>
-<p>You can manage dependencies with <a href="http://bower.io" target="_blank" rel="noopener">Bower</a>. Set <code>baseUrl</code> to <code>bower_components</code> and set a path config for all your application code.</p>
+  // now use .imagesLoaded() jQuery plugin
+  $(&#39;#container&#39;).imagesLoaded( function() {...});
+});
+</code></pre>
+<p>You can manage dependencies with <a href="http://bower.io/">Bower</a>. Set <code>baseUrl</code> to <code>bower_components</code> and set a path config for all your application code.</p>
 <pre><code class="js">requirejs.config({
-  baseUrl: <span class="string">'bower_components/'</span>,
-  paths: { <span class="comment">// path to your app</span>
-    app: <span class="string">'../'</span>
+  baseUrl: &#39;bower_components/&#39;,
+  paths: { // path to your app
+    app: &#39;../&#39;
   }
 });
 
 requirejs( [
-  <span class="string">'imagesloaded/imagesloaded'</span>,
-  <span class="string">'app/my-component.js'</span>
-], <span class="function"><span class="keyword">function</span>(<span class="params"> imagesLoaded, myComp </span>) </span>{
-  imagesLoaded( <span class="string">'#container'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{ ... });
-});</code></pre>
+  &#39;imagesloaded/imagesloaded&#39;,
+  &#39;app/my-component.js&#39;
+], function( imagesLoaded, myComp ) {
+  imagesLoaded( &#39;#container&#39;, function() { ... });
+});
+</code></pre>
 <h2 id="Browser-support"><a href="#Browser-support" class="headerlink" title="Browser support"></a>Browser support</h2><ul>
 <li>IE9+</li>
 <li>Android 2.3+</li>
 <li>iOS Safari 4+</li>
 <li>All other modern browsers</li>
 </ul>
-<p>Use <a href="http://imagesloaded.desandro.com/v3/" target="_blank" rel="noopener">imagesLoaded v3</a> for IE8 support.</p>
-<h2 id="MIT-License"><a href="#MIT-License" class="headerlink" title="MIT License"></a>MIT License</h2><p>imagesLoaded is released under the <a href="http://desandro.mit-license.org/" target="_blank" rel="noopener">MIT License</a>. Have at it.</p>
+<p>Use <a href="http://imagesloaded.desandro.com/v3/">imagesLoaded v3</a> for IE8 support.</p>
+<h2 id="MIT-License"><a href="#MIT-License" class="headerlink" title="MIT License"></a>MIT License</h2><p>imagesLoaded is released under the <a href="http://desandro.mit-license.org/">MIT License</a>. Have at it.</p>
